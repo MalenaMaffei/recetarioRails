@@ -4,6 +4,10 @@
     <%= render :partial => 'receta', :locals => {:recipe => @recipe} %>
 
 
+
+    <div class="row">
+        <div class="col-md-6"><%= render :partial => 'partials/user_date', :locals => {:user => @recipe.user, :date => @recipe.created_at} %></div>
+    </div>
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <%= link_to "Nueva Version", new_version_recipe_path(@recipe), :class => 'btn btn-secondary' %>
@@ -15,8 +19,6 @@
             <% end %>
         </div>
     </div>
-<div class="row">
-    <div class="col-md-6"><%= render :partial => 'partials/user_date', :locals => {:user => @recipe.user, :date => @recipe.created_at} %></div>
-</div>
+
 <%= render :partial => 'link_modal', :locals => {:link => @recipe.token} %>
 <%= render 'partials/comments' %>

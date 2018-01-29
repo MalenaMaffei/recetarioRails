@@ -23,4 +23,16 @@
 * ver mis recetas?
 * que los comentarios se hagan en real time... un poco exagerado, pero para probarlo.
 * que el banner aparezca antes de los botones de borrar editar etc en show recipe
+
+# usabilidad
+Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
+
 # Pruebas
+
+
+
+
+# No pasadas:
+Me quede en Masa Pascualina
+
+{"nombre":"Tartitas de Ganache","ingredientes":"chocolate","cantidades":"<b>Masa:</b>, 1/4 de taza de manteca derretida (50gr), 1 y 1/2 taza de migas de galletitas de chocolate, <b>Ganache:</b>, 200gr de crema, 200gr de chocolate cobertura, vainilla","categoria":"Postre","instrucciones":"","_id":"84zLxQUJARiB7tbG"}
