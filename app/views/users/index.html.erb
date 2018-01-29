@@ -1,0 +1,24 @@
+<% @section_title = 'Usuarios' %>
+
+
+<div class="row my-3">
+    <div class="col-md-12">
+        <div class="card card-body bg-light">
+            <h2 class="card-title page-header"><%= @section_title %> <%= link_to 'Nuevo Usuario', new_user_path, :class => 'btn btn-success' %></h2>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                    <% @users.each do |user| %>
+                        <tr>
+                            <td><%= user.username %></td>
+                            <td>
+                                <%= render :partial => 'partials/edit_delete', :locals => {:edit => edit_user_path(user), :delete => user_path(user)} %>
+                            </td>
+                        </tr>
+                    <% end %>
+                </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<%= form_for recipe do |f| %>
+  <%= error_messages_for(f.object) %>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label "Nombre" %>
+        <%= f.text_field :name, :class => 'form-control', :placeholder => 'Milanesas de Ternera' %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :category %>
+        <%= f.select :category_id, Category.all.collect { |x| [x.name, x.id] }, {:include_blank => 'Elegir Una'}, :class => 'form-control' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label "Ingredientes y Cantidades" %>
+        <%= f.text_area :ingredients, :value => get_ingredients(recipe), :class => 'form-control', :placeholder => "1 huevo, 100gr de pan rallado" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label "Palabras Clave" %>
+        <%= f.text_area :key_words, :class => 'form-control', :placeholder => "Ternera, Nalga" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Instrucciones" %>
+    <%= f.text_area :instructions, :class => 'form-control', :size => '10x8'%>
+  </div>
+
+  <%= f.submit "Aceptar", :class => 'btn btn-success' %>
+  <%= link_to "Cancelar", recipes_path, :class => 'btn btn-outline-primary' %>
+
+<% end %>

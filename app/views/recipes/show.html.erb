@@ -1,0 +1,22 @@
+
+<%= link_to "<< Volver Atrás", recipes_path, :class => 'btn btn-outline-primary my-2'  %>
+
+    <%= render :partial => 'receta', :locals => {:recipe => @recipe} %>
+
+
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <%= link_to "Nueva Version", new_version_recipe_path(@recipe), :class => 'btn btn-secondary' %>
+            <%= link_to raw("Compartir <i class='fa fa-link'></i>"), '#', data: {toggle: "modal", target: "#exampleModal"}, :class => 'btn btn-light' %>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <% if allowed?(@recipe.user) %>
+                <%= render :partial => 'partials/edit_delete', :locals => {:edit => edit_recipe_path(@recipe), :delete => recipe_path(@recipe)} %>
+            <% end %>
+        </div>
+    </div>
+<div class="row">
+    <div class="col-md-6"><%= render :partial => 'partials/user_date', :locals => {:user => @recipe.user, :date => @recipe.created_at} %></div>
+</div>
+<%= render :partial => 'link_modal', :locals => {:link => @recipe.token} %>
+<%= render 'partials/comments' %>

@@ -1,0 +1,219 @@
+body {
+    background-image: image-url('fondo.png');
+}
+
+.container {
+    background: white;
+}
+
+nav {
+    background-color: $background-nav;
+    .navbar-toggler {
+        border-color: rgba(0, 0, 0, 0.1) !important;
+    }
+
+    a {
+        color: $primary-color !important;
+    }
+
+
+}
+.btn-primary {
+    color: white !important;
+}
+
+
+.nombre-receta {
+    color: $primary-color;
+}
+
+
+small {
+    background: $background-nav;
+    color: $primary-color;
+    display: block;
+    margin: 10px 0;
+    padding: 5px 10px;
+}
+
+
+// *********************** ESTO ES DEL MENU PPAL ******************
+// textarea{
+//   height: 200px !important;
+// }
+// .header {
+//     background: #FFDF6E;
+//     /*text-align: center;*/
+//     font-family: Snell Roundhand, cursive;
+//     /*height: 100%;*/
+//     padding: 0.5em;
+//
+// }
+// .header h1{
+//   margin-top: 12px;
+//   margin-left: 8.7em;
+// }
+//
+//
+// .container {
+//   background: white;
+//   /*padding-top: 2px;*/
+//   padding-left: 1em;
+//   padding-right: 1em;
+//   // box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//   /*margin-top: -1em;*/
+// }
+// .invisible {
+//   visibility: hidden;
+// }
+//
+// h3 {
+//   margin-top: 2rem;
+//   color: #F86223;
+// }
+//
+// input[type="button"] {
+//   margin-bottom: 0;
+// }
+// .primary-button{
+//     background-color: #2ca5b9 !important;
+// }
+// td .boton-amarillo{
+//     background-color: #FFF1BD !important;
+// }
+// .divider {
+// position: relative;
+// border-bottom: 1px solid #f0f0f0;
+// margin-bottom: 30px;
+// margin-top: 30px; }
+//
+// .divider:before {
+// position: absolute;
+// content: '';
+// width: 30px;
+// height: 30px;
+// border: 1px solid #f0f0f0;
+// left: 50%;
+// margin-left: -15px;
+// top: 50%;
+// background: #fff;
+// margin-top: -15px;
+// -webkit-transform: rotate(45deg);
+// -moz-transform: rotate(45deg);
+// -ms-transform: rotate(45deg);
+// transform: rotate(45deg); }
+//
+// .divider:after {
+// position: absolute;
+// content: '';
+// width: 20px;
+// height: 20px;
+// border: 1px solid #2ca5b9;
+// left: 50%;
+// margin-left: -10px;
+// top: 50%;
+// background: #2ca5b9;
+// margin-top: -10px;
+// -webkit-transform: rotate(45deg);
+// -moz-transform: rotate(45deg);
+// -ms-transform: rotate(45deg);
+// transform: rotate(45deg); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ************************ ESTO ES SOLO DE LA RECETA *****************************
+
+p, li {
+    // font-size: 150%;
+}
+.jumbotron {
+    background-color: $background-light;
+    padding: 0.5em 0.6em;
+}
+h1, h3 {
+  font-family: Snell Roundhand, cursive;
+}
+.fa-cutlery {
+  float: left;
+  /*margin-left: -1.5em;*/
+  padding-left: 2em;
+  padding-right: 0.5em;
+  color: #F86223;
+}
+.ingredient{
+  list-style-type: none;
+  padding-bottom: 0.5em;
+  margin-left: -4em;
+  columns: 2;
+}
+/*ul li {
+    margin-left: 1em;
+    text-indent: -1em;
+}*/
+.instrucciones::first-letter {
+  font-family: cursive;
+  font-size: 200%;
+  color: #F86223;
+}
+
+
+.divider {
+position: relative;
+border-bottom: 1px solid #f0f0f0;
+margin-bottom: 30px;
+margin-top: 30px; }
+
+.divider:before {
+position: absolute;
+content: '';
+width: 30px;
+height: 30px;
+border: 1px solid #f0f0f0;
+left: 50%;
+margin-left: -15px;
+top: 50%;
+background: #fff;
+margin-top: -15px;
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg); }
+
+.divider:after {
+position: absolute;
+content: '';
+width: 20px;
+height: 20px;
+border: 1px solid #2ca5b9;
+left: 50%;
+margin-left: -10px;
+top: 50%;
+background: #2ca5b9;
+margin-top: -10px;
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg); }

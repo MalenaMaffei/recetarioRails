@@ -1,0 +1,12 @@
+<%= form_for category do |f| %>
+  <%= error_messages_for(f.object) %>
+  <div class="form-group">
+    <%= f.label 'Nombre' %>
+    <%= f.text_field :name, :class => 'form-control' %>
+  </div>
+  <br/>
+
+  <%= f.submit "Aceptar", :class => 'btn btn-primary' %>
+  <%= link_to "Cancelar", categories_path, :class => 'btn btn-default' %>
+
+<% end %>

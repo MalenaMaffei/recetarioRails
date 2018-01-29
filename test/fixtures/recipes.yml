@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ingredients: MyString
+  key_words: MyString
+  name: MyString
+  instructions: MyString
+  parent_id: 
+  category_id: 
+  user_id: 
+  token: MyString
+
+two:
+  ingredients: MyString
+  key_words: MyString
+  name: MyString
+  instructions: MyString
+  parent_id: 
+  category_id: 
+  user_id: 
+  token: MyString

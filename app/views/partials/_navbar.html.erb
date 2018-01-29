@@ -1,0 +1,29 @@
+<nav class="navbar  navbar-dark navbar-toggleable-md navbar-expand-md">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <%= link_to "Nueva Receta", new_recipe_path, :class => 'navbar-brand btn btn-primary' %>
+  <%= link_to "Recetas", root_path, :class => 'navbar-brand' %>
+
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto">
+      <%= render :partial => 'partials/search_form' %>
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Buscar</button>
+      </form> -->
+    </ul>
+    <ul class="navbar-nav ml-auto my-2 mx-5">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administrar</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <%= link_to 'Categorías', categories_path, :class => 'dropdown-item' %>
+          <%= link_to 'Usuarios', users_path, :class => 'dropdown-item' %>
+          <%= link_to 'Salir', logout_path, :class => 'dropdown-item' %>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</nav>
