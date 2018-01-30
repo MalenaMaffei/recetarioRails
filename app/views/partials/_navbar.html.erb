@@ -16,10 +16,14 @@
     </ul>
     <ul class="navbar-nav ml-auto my-2 mx-5">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administrar</a>
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= current_username %></a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
+           <!-- <p class="dropdown-item">Hola <mark><strong><%= current_username %></strong></mark>!</p>        -->
           <%= link_to 'Categorías', categories_path, :class => 'dropdown-item' %>
-          <%= link_to 'Usuarios', users_path, :class => 'dropdown-item' %>
+          <% if current_user.admin? %>
+                    <%= link_to 'Usuarios', users_path, :class => 'dropdown-item' %>
+          <% end %>
+
           <%= link_to 'Salir', logout_path, :class => 'dropdown-item' %>
         </div>
       </li>

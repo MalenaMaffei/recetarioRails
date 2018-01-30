@@ -22,13 +22,13 @@ class ApplicationController < ActionController::Base
       User.find(session[:user_id]) if session[:user_id]
   end
 
-  def allowed?(owner)
-    if owner == current_user || current_user.admin
-      true
-    else
-      false
-    end
-  end
+  # def allowed?(owner)
+  #   if owner == current_user || current_user.admin?
+  #     true
+  #   else
+  #     false
+  #   end
+  # end
 
   private
   def confirm_logged_in

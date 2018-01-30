@@ -86,8 +86,8 @@ class RecipesController < ApplicationController
 
     def confirm_permissions
       recipe = Recipe.find(params[:id])
-      unless allowed?(recipe.user)
-        flash_redirect("No tenes permisos para realizar esa accion", recipe_path(recipe))
+      unless helpers.allowed?(recipe.user)
+        flash_redirect("No tenes permisos para realizar esa accion.", recipe_path(recipe))
       end
     end
 
