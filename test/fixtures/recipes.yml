@@ -5,17 +5,17 @@ one:
   key_words: MyString
   name: MyString
   instructions: MyString
-  parent_id: 
-  category_id: 
-  user_id: 
-  token: MyString
+  parent_id:
+  category_id:
+  user_id:
+  token: abcdefg
 
 two:
   ingredients: MyString
   key_words: MyString
   name: MyString
   instructions: MyString
-  parent_id: 
-  category_id: 
-  user_id: 
-  token: MyString
+  parent_id:
+  category_id:
+  user_id:
+  token: hijklmn

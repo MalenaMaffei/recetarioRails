@@ -1,7 +1,7 @@
 module ApplicationHelper
 
-    ADMIN = 'male'
-    
+    # ADMIN = 'male'
+
     def error_messages_for(object)
       render(:partial => 'partials/error_messages', :locals => {:object => object})
     end
@@ -19,7 +19,7 @@ module ApplicationHelper
     end
 
     def allowed?(owner)
-      if owner == current_user || current_user.username == ADMIN
+      if owner == current_user || current_user.admin
         true
       else
         false

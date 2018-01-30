@@ -3,7 +3,7 @@ class Recipe < ApplicationRecord
     # serialize :key_words
     belongs_to :category
     belongs_to :user
-    has_many :comments
+    has_many :comments, dependent: :destroy # destruyo los comentarios de esta receta si la borro
 
     before_validation :generate_token, on: :create
 
@@ -16,7 +16,12 @@ class Recipe < ApplicationRecord
     validates :instructions, :presence => true, :length => { :minimum => 10 }
 
     scope :search, lambda {|query| where(["name ILIKE ? OR key_words ILIKE ?", "%#{query}%", "%#{query}%"]) } #esto es seguro! porque es saneado query
-    scope :sorted, -> { order("category_id ASC, name ASC") }
+    # Package.includes(:package_size).order("package_sizes.sort_order")
+    scope :sorted, -> { order("recipes.name ASC") }
+    # scope :sorted, -> { order(Recipe.joins(:category).merge(Category.order(name: :asc)), name: :asc) }
+    # scope :sorted, -> { joins(:category).order("category.name") }
+    # scope :sorted, -> { includes(:category).order("category.name DESC") }
+    # scope :sorted, -> {  }
 
     def generate_token
       begin

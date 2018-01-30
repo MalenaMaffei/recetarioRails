@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   before_action :confirm_logged_in, :except => [:login, :attempt_login, :logout, :show_shareable]
 
-  ADMIN = 'male'
+  # ADMIN = 'male'
 
   def valid_record?(record, message, ok_path, nok_layout)
    if record.valid?
@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   end
 
   def allowed?(owner)
-    if owner == current_user || current_user.username == ADMIN
+    if owner == current_user || current_user.admin
       true
     else
       false

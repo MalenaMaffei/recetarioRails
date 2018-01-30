@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
       if params[:search]
           @recipes = Recipe.search(params[:search]).sorted
       else
-          @recipes = Recipe.sorted
+          @recipes = Recipe.includes(:category).order("categories.name ASC").sorted
       end
 
   end
