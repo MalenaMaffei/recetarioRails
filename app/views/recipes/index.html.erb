@@ -2,22 +2,24 @@
 
 
 <div class="row my-3">
-    <div class="col-md-12">
+    <div class="col-md-9">
+      <div class="card card-body bg-light">
         <h2>Recetas</h2>
-        <!-- <div class="card card-body bg-light"> -->
-
-                <table class="table">
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Categoría</th>
-                    </tr>
-                    <% @recipes.each do |recipe| %>
-                        <tr>
-                            <td><%= link_to recipe.name, recipe_path(recipe)%></td>
-                            <td><%= recipe.category.name %></td>
-                        </tr>
-                    <% end %>
-                </table>
-        <!-- </div> -->
+        <table class="table">
+            <tr>
+                <th>Nombre</th>
+                <th>Categoría</th>
+            </tr>
+            <% @recipes.each do |recipe| %>
+                <tr>
+                    <td><%= link_to recipe.name, recipe_path(recipe)%></td>
+                    <td><%= recipe.category.name %></td>
+                </tr>
+            <% end %>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-3 fixed">
+      <%= render(:partial => 'partials/sidebar') %>
     </div>
 </div>

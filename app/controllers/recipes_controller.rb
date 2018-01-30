@@ -6,6 +6,7 @@ class RecipesController < ApplicationController
 
 
   def index
+      @categories = Category.sorted
       if params[:search]
           @recipes = Recipe.search(params[:search]).sorted
       else
