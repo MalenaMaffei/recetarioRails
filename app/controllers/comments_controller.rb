@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+
+    before_action :confirm_permissions, :only => [:destroy]
+
     def create
         # @recipe = Recipe.find(params[:post_id])
         # @comment = @recipe.comments.create(comment_params)
@@ -24,5 +27,12 @@ class CommentsController < ApplicationController
     private
     def comment_params
       params.require(:comment).permit(:body, :recipe_id, :user_id)
+    end
+
+    def confirm_permissions
+      comment = Comment.find(params[:recipe_id])
+      unless helpers.allowed?(comment.user)
+        flash_redirect("No tenes permisos para realizar esa accion.", request.referrer)
+      end
     end
 end

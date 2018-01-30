@@ -20,7 +20,7 @@
 * tipo ml campanita con notificaciones de comentarios que se hicieron en tu receta.
 * avisar que alguien hizo una nueva version?
 * centrar search form
-* proteger la creacion de usuarios.
+
 * crear link en administrar para administrar tu usuario
 * ver mis recetas?
 * que los comentarios se hagan en real time... un poco exagerado, pero para probarlo.
@@ -29,7 +29,7 @@
 
 * CHECK INTEGRITY cuando se borra usuario... a quien se las deberia pasar? o sea, ahora es a mi, pero si fuera el concepto de grupos?
 
-* hacer que la categoria misc sea no borrable
+* hacer que la categoria misc sea no borrable, o hacer que si no existe, se pase a la primera que exista
 
 
 # usabilidad
