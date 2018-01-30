@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
+  before_action :confirm_permissions, :except => [:show]
   def index
       @users = User.all
+  end
+
+  def show
+      @user = User.find(params[:id])
   end
 
   def new
@@ -29,7 +34,15 @@ class UsersController < ApplicationController
     flash_redirect("Usuario '#{@user.username}' eliminado.", users_path)
   end
 
+  private
   def user_params
     params.require(:user).permit(:username, :email, :password)
   end
+
+  def confirm_permissions
+      # user = User.find(params[:id])
+      unless current_user.admin?
+        flash_redirect("No tenes permisos para realizar esa accion.", root_path)
+      end
+    end
 end

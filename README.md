@@ -46,6 +46,7 @@ Me quede en "Pepinos Agridulces"
 {"nombre":"Tartitas de Ganache","ingredientes":"chocolate","cantidades":"<b>Masa:</b>, 1/4 de taza de manteca derretida (50gr), 1 y 1/2 taza de migas de galletitas de chocolate, <b>Ganache:</b>, 200gr de crema, 200gr de chocolate cobertura, vainilla","categoria":"Postre","instrucciones":""}
 {"nombre":"Torta de Ricotta","ingredientes":"ricotta, ricota","cantidades":"<b>Masa:</b>, 400gr de harina leudante, 200gr de manteca, 120gr de azúcar, 1 huevo, vainilla, <b>Relleno:</b>, 500gr de ricotta, 2 huevos, 70gr de maicena, 100gr de crema, 130gr de azúcar, ralladura, vainilla","categoria":"Postre","instrucciones":""}
 
-
+# GEneral
+flash redirect que tenga para si es alert o danger o no se que
 
 VIDEO: 22 PROFESSIONAL RUBY DEV
