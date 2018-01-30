@@ -4,7 +4,10 @@ class CategoriesController < ApplicationController
   end
 
   def show
-
+      @category = Category.find(params[:id])
+      @categories = Category.sorted
+      @recipes = @category.recipes
+      render('recipes/index')
   end
 
   def new
