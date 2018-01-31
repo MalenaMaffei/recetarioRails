@@ -20,6 +20,11 @@ class CategoriesController < ApplicationController
     valid_record?(@category, "Categoría '#{@category.name}' creada exitosamente.", categories_path, 'new')
   end
 
+  # def just_save
+  #     @category = Category.new(category_params)
+  #     @category.save
+  # end
+
   def edit
     @category = Category.find(params[:id])
   end
@@ -35,8 +40,6 @@ class CategoriesController < ApplicationController
     @category.destroy
     flash_redirect("Categoría '#{@category.name}' eliminada.", categories_path)
   end
-
-
 
 
   private

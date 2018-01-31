@@ -32,6 +32,7 @@ class RecipesController < ApplicationController
   end
 
   def new
+      @category = Category.new
       @recipe = Recipe.new
   end
 
@@ -60,6 +61,7 @@ class RecipesController < ApplicationController
   end
 
   def edit
+    @category = Category.new
     @recipe = Recipe.find(params[:id])
   end
 

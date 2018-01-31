@@ -25,7 +25,7 @@
 
 * que los comentarios se hagan en real time... un poco exagerado, pero para probarlo.
 
-* crear categoria desde creando una receta
+* crear categoria desde creando una receta -> empece pero tengo un problema con los redirects.
 
 * CHECK INTEGRITY cuando se borra usuario... a quien se las deberia pasar? o sea, ahora es a mi, pero si fuera el concepto de grupos?
 
