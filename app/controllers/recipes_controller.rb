@@ -56,7 +56,7 @@ class RecipesController < ApplicationController
     @recipe = @user.recipes.build(recipe_params.merge({ingredients:ingredients}))
     # @recipe.instructions = simple_format(@recipe.instructions)
     @recipe.save
-    valid_record?(@recipe, "Receta '#{@recipe.name}' creada exitosamente.", recipes_path, 'new')
+    valid_record?(@recipe, "Receta '#{@recipe.name}' creada exitosamente.", recipe_path(@recipe), 'new')
 
   end
 
