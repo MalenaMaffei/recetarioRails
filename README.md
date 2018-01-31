@@ -4,8 +4,9 @@
 * volver atras link que te lleve atras si estabas en el dominio de las recetas, sino que te lleve a recipes_path
 
 
+# Features
 
-* Sidebar de categorias
+
 * Errores que se pongan rojas las forms
 
 * poner todas las relaciones en los modelos cuando este todo listo
@@ -32,6 +33,9 @@
 * CHECK INTEGRITY cuando se borra usuario... a quien se las deberia pasar? o sea, ahora es a mi, pero si fuera el concepto de grupos?
 
 * hacer que la categoria misc sea no borrable, o hacer que si no existe, se pase a la primera que exista
+
+
+* favoritos
 
 
 # usabilidad
