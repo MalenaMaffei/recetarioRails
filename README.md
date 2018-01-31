@@ -39,7 +39,7 @@ Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
 * will paginate con bootstrap, esta en el video de professional rails dev
 * Boton de ayuda debajo del nombre de usuario, te explica como ahcer las cosas
 
-
+* SACAR CATEGORIAS para todos excepto admin, si es que logro hacer lo del modal... tengo que ver como no hacer un redirect despues de la accion
 
 
 # Pruebas
