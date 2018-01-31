@@ -7,7 +7,7 @@
 # Features
 
 
-* Errores que se pongan rojas las forms
+
 
 * poner todas las relaciones en los modelos cuando este todo listo
 * no categorias duplicadas
@@ -17,7 +17,7 @@
 
 * Al buscar, que busque en todo, pero si yo en el sidebar elijo lo que sea, que filtre a esas recetas dentro de la busqueda, si es posible.
 
-* inredientes responsive, que se vayan uno abajo del otro cuando ya no da mas.
+
 * tipo ml campanita con notificaciones de comentarios que se hicieron en tu receta.
 * avisar que alguien hizo una nueva version?
 * centrar search form
@@ -37,6 +37,11 @@
 
 * favoritos
 
+
+# estilo
+* Errores que se pongan rojas las forms
+* inredientes responsive, que se vayan uno abajo del otro cuando ya no da mas.
+* mejor wrap en los ingredientes
 
 # usabilidad
 Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
