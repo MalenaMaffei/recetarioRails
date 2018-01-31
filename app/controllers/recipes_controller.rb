@@ -72,7 +72,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.update_attributes(recipe_params.merge({ingredients:ingredients}))
     # @recipe.instructions = simple_format(@recipe.instructions)
-    valid_record?(@recipe, "Receta '#{@recipe.name}' editada exitosamente.", recipes_path, 'edit')
+    valid_record?(@recipe, "Receta '#{@recipe.name}' editada exitosamente.", recipe_path(@recipe), 'edit')
   end
 
   def destroy
