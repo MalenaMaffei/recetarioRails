@@ -40,8 +40,8 @@
 
 # estilo
 * Errores que se pongan rojas las forms
-* inredientes responsive, que se vayan uno abajo del otro cuando ya no da mas.
-* mejor wrap en los ingredientes
+
+
 
 # usabilidad
 Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...

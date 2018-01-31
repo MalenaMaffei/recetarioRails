@@ -160,17 +160,17 @@ h1, h3 {
 }
 .fa-cutlery {
   float: left;
-  /*margin-left: -1.5em;*/
+  margin-left: -1.5em;
   padding-left: 2em;
-  padding-right: 0.5em;
+  padding-right: 1.2em;
   color: #F86223;
 }
 
 
 .ingredient{
   list-style-type: none;
-  padding-bottom: 0.5em;
-  margin-left: -4em;
+  // padding-bottom: 0.5em;
+  margin-left: -2em;
   columns: 1;
   @media (min-width: 768px) {
     columns: 1;
@@ -178,6 +178,28 @@ h1, h3 {
   @media (min-width: 992px) {
     columns: 2;
   }
+
+  li {
+    /*
+     * We want the bullets outside of the list,
+     * so the text is aligned. Now the actual bullet
+     * is outside of the list’s container
+     */
+    list-style-position: outside;
+
+    /*
+     * Because the bullet is outside of the list’s
+     * container, indent the list entirely
+     */
+    margin-left: 1.5em;
+    text-indent: -1.5em;
+}
+
+
+    // li {
+    //     margin-left: 1em;
+    //     text-indent: -1em;
+    // }
 }
 /*ul li {
     margin-left: 1em;
