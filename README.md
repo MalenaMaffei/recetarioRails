@@ -52,6 +52,8 @@ Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
 
 * Hacer que el admin pueda ver las recetas de cada user.
 
+* Sacar lo de que se abra el modal para poder compartir, y por ahi poner un tooltip mas informativo
+
 # Pruebas
 
 
