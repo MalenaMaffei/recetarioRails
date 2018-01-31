@@ -10,6 +10,9 @@
                          <%= comment.body %>
                      </div>
                      <% if allowed?(comment.user) %>
+                            <%= link_to recipe_comment_path(comment), :method => :delete, :class => 'btn btn-outline-danger' do %>
+                                <%= fa_icon "trash-o" %>
+                            <% end %>
                          <%= link_to 'Borrar', recipe_comment_path(comment), :method => :delete, :class => 'btn btn-outline-danger' %>
                      <% end %>
                 </div>

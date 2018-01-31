@@ -1,1 +1,8 @@
-<%= link_to 'Editar', edit, :class => 'btn btn-outline-secondary' %>  <%= link_to 'Borrar', delete, :method => :delete, :data => {:confirm => 'Estás seguro que querés borrar el elemento?'}, :class => 'btn btn-outline-danger' %>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+  <%= link_to raw("<i class='fa fa-edit'></i> Cambiar"), edit, :class => 'btn btn-outline-success' %>
+  <%= link_to delete, :method => :delete, :data => {:confirm => 'Estás seguro que querés borrar el elemento?'}, :class => 'btn btn-outline-danger' do %>
+      <%= fa_icon "trash-o" %> Borrar
+  <% end %>
+  <%# link_to "Borrar", delete, :method => :delete, :data => {:confirm => 'Estás seguro que querés borrar el elemento?'}, :class => 'btn btn-danger' %>
+</div>

@@ -1,9 +1,11 @@
 <% @page_title = @recipe.name %>
-<div class="jumbotron text-center">
-    <h1 class="nombre-receta"><%= @recipe.name %></h1>
-    <h3 class="categoria"><%= @recipe.category.name %></h3>
-</div>
-<div class="container">
+
+<!-- <div class="container"> -->
+
+        <div class="jumbotron text-center">
+            <h1 class="nombre-receta"><%= @recipe.name %></h1>
+            <h3 class="categoria"><%= @recipe.category.name %></h3>
+        </div>
     <ul class="ingredient">
         <% @recipe.ingredients.each do |ingredient| %>
         <li><%= fa_icon "cutlery" %> <%= ingredient %></li>
@@ -11,4 +13,5 @@
     </ul>
     <div class="divider"></div>
     <div class="instrucciones"><%= simple_format(@recipe.instructions) %></div>
-</div>
+    
+<!-- </div> -->
