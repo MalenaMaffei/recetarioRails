@@ -2,12 +2,12 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <%= image_link_to "logo.png", recipes_path, { alt: 'Ver todas las recetas' }, { class: 'navbar-brand btn btn-outline-secondary' } %>
   <%= link_to "Nueva Receta", new_recipe_path, :class => 'navbar-brand btn btn-primary' %>
-  <%= link_to "Recetas", recipes_path, :class => 'navbar-brand' %>
 
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav">
       <%= render :partial => 'partials/search_form' %>
       <!-- <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
