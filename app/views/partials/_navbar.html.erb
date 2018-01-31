@@ -1,7 +1,4 @@
 <nav class="navbar  navbar-dark navbar-toggleable-md navbar-expand-md">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
   <%= image_link_to "logo.png", recipes_path, { alt: 'Ver todas las recetas' }, { class: 'navbar-brand btn btn-outline-secondary' } %>
   <%= link_to "Nueva Receta", new_recipe_path, :class => 'navbar-brand btn btn-primary' %>
 
@@ -31,4 +28,7 @@
     </ul>
 
   </div>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 </nav>
