@@ -165,11 +165,19 @@ h1, h3 {
   padding-right: 0.5em;
   color: #F86223;
 }
+
+
 .ingredient{
   list-style-type: none;
   padding-bottom: 0.5em;
   margin-left: -4em;
-  columns: 2;
+  columns: 1;
+  @media (min-width: 768px) {
+    columns: 1;
+  }
+  @media (min-width: 992px) {
+    columns: 2;
+  }
 }
 /*ul li {
     margin-left: 1em;
