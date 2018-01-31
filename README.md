@@ -22,7 +22,7 @@
 * centrar search form
 
 * crear link en administrar para administrar tu usuario
-* ver mis recetas?
+
 * que los comentarios se hagan en real time... un poco exagerado, pero para probarlo.
 
 * crear categoria desde creando una receta
@@ -35,6 +35,11 @@
 # usabilidad
 Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
 * will paginate con bootstrap, esta en el video de professional rails dev
+* Boton de ayuda debajo del nombre de usuario, te explica como ahcer las cosas
+
+
+
+
 # Pruebas
 
 

@@ -23,6 +23,7 @@
           <% if current_user.admin? %>
                     <%= link_to 'Usuarios', users_path, :class => 'dropdown-item' %>
           <% end %>
+          <%= link_to 'Mis Recetas', recipes_path(:user => current_user.id), :class => 'dropdown-item' %>
           <%= link_to 'Mi Perfil', user_path(current_user), :class => 'dropdown-item' %>
           <%= link_to 'Salir', logout_path, :class => 'dropdown-item' %>
         </div>

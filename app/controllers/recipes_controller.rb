@@ -9,6 +9,8 @@ class RecipesController < ApplicationController
       @categories = Category.sorted
       if params[:search]
           @recipes = Recipe.search(params[:search]).sorted
+      elsif params[:user]
+          @recipes = Recipe.where(:user => params[:user]).includes(:category).order("categories.name ASC").sorted
       else
           @recipes = Recipe.includes(:category).order("categories.name ASC").sorted
       end
