@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :notifications, only: [:index]
+
   get ':token', :to => 'recipes#show_shareable'
 
 end
