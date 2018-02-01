@@ -169,7 +169,7 @@ h1, h3 {
 
 .ingredient{
   list-style-type: none;
-  // padding-bottom: 0.5em;
+
   margin-left: -2em;
   columns: 1;
   @media (min-width: 768px) {
@@ -180,6 +180,8 @@ h1, h3 {
   }
 
   li {
+       padding-bottom: 0.5em;
+
     /*
      * We want the bullets outside of the list,
      * so the text is aligned. Now the actual bullet
@@ -193,6 +195,9 @@ h1, h3 {
      */
     margin-left: 1.5em;
     text-indent: -1.5em;
+    i {
+        margin-top: 0.2em;
+    }
 }
 
 
