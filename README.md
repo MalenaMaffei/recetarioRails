@@ -46,9 +46,19 @@
 * favoritos
 
 
+* mas largo link de recetas
+
+* link de invitacion a un grupos
+
+* google o facebook auth
+
+
 # estilo
 * Errores que se pongan rojas las forms
 * dejar fijas las fonts
+* Texto debajo del logo de recetas.
+* https://themeforest.net/item/socialchef-social-recipe-html-template/8568727?s_rank=3
+* https://themeforest.net/item/recipe-food-bootstrap-template/19150443?s_rank=4
 
 
 # usabilidad
