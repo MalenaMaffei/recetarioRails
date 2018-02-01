@@ -6,7 +6,7 @@
 
 # Features
 
-
+* crear pdf con recetas
 
 
 * poner todas las relaciones en los modelos cuando este todo listo
@@ -18,7 +18,15 @@
 * Al buscar, que busque en todo, pero si yo en el sidebar elijo lo que sea, que filtre a esas recetas dentro de la busqueda, si es posible.
 
 
-* tipo ml campanita con notificaciones de comentarios que se hicieron en tu receta.
+* tipo ml campanita con notificaciones de comentarios que se hicieron en tu receta.:
+        https://github.com/rails-engine/notifications
+        https://github.com/simukappu/activity_notification
+        https://gorails.com/episodes/in-app-navbar-notifications
+        http://api.rubyonrails.org/v5.0/classes/ActiveSupport/Notifications.html
+        http://aalvarez.me/blog/posts/easy-notification-system-in-rails.html
+
+
+
 * avisar que alguien hizo una nueva version?
 * centrar search form
 
@@ -40,7 +48,7 @@
 
 # estilo
 * Errores que se pongan rojas las forms
-
+* dejar fijas las fonts
 
 
 # usabilidad
