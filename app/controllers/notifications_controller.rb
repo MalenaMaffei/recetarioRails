@@ -13,7 +13,9 @@ class NotificationsController < ApplicationController
   private
 
   def set_notifications
-    @notifications = Notification.where(recipient: current_user).unread
+    # @notifications = Notification.where(recipient: current_user).unread
+    @notifications =  Notification.where(recipient: current_user).active.newest_first
+
   end
 
 end

@@ -24,10 +24,11 @@
 
 
 
-
+# jQuery ->
 class Notifications
     constructor: ->
         @notifications = $("[data-behavior='notifications']")
+        # console.log(@notifications)
         @setup() if @notifications.length > 0
         # if @notifications.length > 0
         #   @handleSuccess @notifications.data("notifications")
@@ -38,13 +39,13 @@ class Notifications
         #   ), 5000
 
 
-      # getNewNotifications: ->
-      #   $.ajax(
-      #     url: "/notifications.json"
-      #     dataType: "JSON"
-      #     method: "GET"
-      #     success: @handleSuccess
-      #   )
+    # getNewNotifications: ->
+    #     $.ajax(
+    #       url: "/notifications.json"
+    #       dataType: "JSON"
+    #       method: "GET"
+    #       success: @handleSuccess
+    #     )
 
 
     setup: ->
@@ -74,12 +75,20 @@ class Notifications
       items = $.map data, (notification) ->
           notification.template
 
+      unread_count = 0
+      $.each data, (i, notification) ->
+        if notification.unread
+          unread_count += 1
+
+
       $("[data-behavior='notification-items']").append(items)
       $("[data-behavior='unread-count']").text("")
-      if items.length > 0
-          $("[data-behavior='unread-count']").text(items.length)
+      if unread_count > 0
+          $("[data-behavior='unread-count']").text(unread_count)
 
 
-
-jQuery ->
+ready = ->
     new Notifications
+
+
+$(document).on('turbolinks:load', ready)

@@ -24,7 +24,7 @@
       <span class="badge badge-pill badge-secondary" data-behavior="unread-count"></span>
     </a>
     <div id="notifications" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown02" data-behavior="notification-items">
-        <% if current_user.notifications.unread.empty? %>
+        <% if current_user.notifications.active.empty? %>
           <p class="small text-muted mx-2">No hay notificaciones.</p>
         <% end %>
     </div>
