@@ -14,6 +14,7 @@ class Comment < ApplicationRecord
           users << comment.user
         end
       end
+      users << self.recipe.user
       return users.uniq
     end
 
