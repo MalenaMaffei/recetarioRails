@@ -56,7 +56,12 @@ class RecipesController < ApplicationController
     @recipe = @user.recipes.build(recipe_params.merge({ingredients:ingredients}))
     # @recipe.instructions = simple_format(@recipe.instructions)
     @recipe.save
-    valid_record?(@recipe, "Receta '#{@recipe.name}' creada exitosamente.", recipe_path(@recipe), 'new')
+    # valid_record?(@recipe, "Receta '#{@recipe.name}' creada exitosamente.", recipe_path(@recipe), 'new')
+    if @recipe.valid?
+      flash_redirect("Receta '#{@recipe.name}' editada exitosamente.", recipe_path(@recipe))
+    else
+      render('new')
+    end
 
   end
 
@@ -72,7 +77,12 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.update_attributes(recipe_params.merge({ingredients:ingredients}))
     # @recipe.instructions = simple_format(@recipe.instructions)
-    valid_record?(@recipe, "Receta '#{@recipe.name}' editada exitosamente.", recipe_path(@recipe), 'edit')
+    # valid_record?(@recipe, "Receta '#{@recipe.name}' editada exitosamente.", recipe_path(@recipe), 'edit')
+    if @recipe.valid?
+      flash_redirect("Receta '#{@recipe.name}' editada exitosamente.", recipe_path(@recipe))
+    else
+      render('edit')
+    end
   end
 
   def destroy
