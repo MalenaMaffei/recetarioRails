@@ -40,6 +40,9 @@
   // var clipboard = new Clipboard('.clipboard-btn');
   // console.log(clipboard);
   // Tooltip
+  $("#inputGroupSelect01").change(function() {
+  window.location = $(this).find("option:selected").val();
+});
 
 $('.clipboard-btn').tooltip({
   trigger: 'click',

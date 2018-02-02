@@ -2,7 +2,7 @@
 
 
 * volver atras link que te lleve atras si estabas en el dominio de las recetas, sino que te lleve a recipes_path
-
+* muy villa el select de las categorias, ver si se puede hacer mas elegante
 
 # Features
 

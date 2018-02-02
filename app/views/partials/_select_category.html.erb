@@ -1,0 +1,15 @@
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01" onchange="follow_link(this)">
+    <option value="<%= categories_path %>">Todas</option>
+    <% @categories.each do |category| %>
+        <% if current_page?(category_path(category)) %>
+           <option  selected value="<%= category_path(category) %>"><%= category.name %></option>
+        <% else %>
+            <option  value="<%= category_path(category) %>"><%= category.name %></option>
+        <% end %>
+     <% end %>
+  </select>
+</div>
