@@ -1,11 +1,12 @@
-<%= link_to recipe_path(notification.notifiable.recipe, anchor: dom_id(notification.notifiable)), class: "dropdown-item #{"unread" if !notification.read_at?}" do %>
+
   <div class="media">
+    <%= link_to recipe_path(notification.notifiable.recipe, anchor: dom_id(notification.notifiable)), class: "dropdown-item #{"unread" if !notification.read_at?} mb-2  mx-2" do %>
     <div class="media-body">
       <span class="small text-muted"><%= notification.created_at.in_time_zone('Buenos Aires').to_time.strftime('%B %e at %l:%M %p') %></span>
       <p>
-        <strong><%= notification.actor.username %></strong> hizo un comentario en la receta: <strong><%= notification.notifiable.recipe.name %></strong>
+        <strong><%= notification.actor.username %></strong> comentó en: <strong><%= notification.notifiable.recipe.name %></strong>
       </p>
-      <p class="small text-muted"><%= truncate(notification.notifiable.body, length: 100) %></p>
+      <p class="small text-muted"><%= truncate(notification.notifiable.body, length: 50) %></p>
     </div>
+    <% end %>
   </div>
-<% end %>

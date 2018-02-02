@@ -1,5 +1,5 @@
 
-<%= link_to "<< Volver Atrás", recipes_path, :class => 'btn btn-outline-primary my-2'  %>
+<%= link_to "<< Volver Atrás", recipes_path, :class => 'btn btn-primary my-2'  %>
     <div class="card card-body bg-light">
     <%= render :partial => 'receta', :locals => {:recipe => @recipe} %>
 
@@ -13,7 +13,7 @@
             <%= link_to "Nueva Version", new_version_recipe_path(@recipe), :class => 'btn btn-secondary' %>
             <%= link_to raw("Compartir <i class='fa fa-link'></i>"), '#', data: {toggle: "modal", target: "#exampleModal"}, :class => 'btn btn-outline-primary' %>
         </div>
-        <div class="col-md-6 col-sm-12">
+        <div class="col-md-6 col-sm-12 mt-2">
             <% if allowed?(@recipe.user) %>
                 <%= render :partial => 'partials/edit_delete', :locals => {:edit => edit_recipe_path(@recipe), :delete => recipe_path(@recipe)} %>
             <% end %>
