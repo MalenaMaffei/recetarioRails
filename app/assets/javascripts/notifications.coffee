@@ -28,32 +28,37 @@
 class Notifications
     constructor: ->
         @notifications = $("[data-behavior='notifications']")
-        # @setup() if @notifications.length > 0
-        if @notifications.length > 0
-          @handleSuccess @notifications.data("notifications")
-          $("[data-behavior='notifications-link']").on "click", @handleClick
+        @setup() if @notifications.length > 0
+        # if @notifications.length > 0
+        #   @handleSuccess @notifications.data("notifications")
+        #   $("[data-behavior='notifications-link']").on "click", @handleClick
+        #
+        #   setInterval (=>
+        #     @getNewNotifications()
+        #   ), 5000
 
-          setInterval (=>
-            @getNewNotifications()
-          ), 5000
+
+      # getNewNotifications: ->
+      #   $.ajax(
+      #     url: "/notifications.json"
+      #     dataType: "JSON"
+      #     method: "GET"
+      #     success: @handleSuccess
+      #   )
 
 
-      getNewNotifications: ->
+    setup: ->
+        # console.log(@notifications)
+        $("[data-behavior='notifications-link']").on "click", @handleClick
         $.ajax(
-          url: "/notifications.json"
-          dataType: "JSON"
-          method: "GET"
-          success: @handleSuccess
+            url: "/notifications.json"
+            dataType: 'JSON'
+            method: "GET"
+            success: @handleSuccess
         )
-    # setup: ->
-    #     # console.log(@notifications)
-    #     $("[data-behavior='notifications-link']").on "click", @handleClick
-    #     $.ajax(
-    #         url: "/notifications.json"
-    #         dataType: 'JSON'
-    #         method: "GET"
-    #         success: @handleSuccess
-    #     )
+
+
+
 
     handleClick: (e) =>
         $.ajax(
