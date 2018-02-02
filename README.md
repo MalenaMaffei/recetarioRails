@@ -64,6 +64,11 @@
 * https://themeforest.net/item/socialchef-social-recipe-html-template/8568727?s_rank=3
 * https://themeforest.net/item/recipe-food-bootstrap-template/19150443?s_rank=4
 
+* NO ENTRA DEL TODO LA NOTIFICACION EN EL CELU, ARREGLAR
+
+
+
+
 
 # usabilidad
 Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
