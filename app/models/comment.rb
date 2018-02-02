@@ -14,7 +14,10 @@ class Comment < ApplicationRecord
           users << comment.user
         end
       end
-      users << self.recipe.user
+      unless self.recipe.user == self.user
+          users << self.recipe.user
+      end
+
       return users.uniq
     end
 
