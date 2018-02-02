@@ -26,6 +26,10 @@
         http://aalvarez.me/blog/posts/easy-notification-system-in-rails.html
 
 
+        * casi listo, terminar de arreglar el tema de que no funciona bien cuando las toma a cada intervalo.
+        * ver que onda de ir borrandolas
+        * ver que onda de que se muestren por unos minutos, que tengan una vida util despues de que hayan sido vistas... metodo en vez de unread alive o algo asi?
+
 
 * avisar que alguien hizo una nueva version?
 * centrar search form

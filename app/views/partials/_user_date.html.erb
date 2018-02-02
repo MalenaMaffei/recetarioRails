@@ -1,1 +1,1 @@
-<small><strong><%= user.username %></strong> on <%= date.to_time.strftime('%B %e at %l:%M %p') %></small>
+<small><strong><%= user.username %></strong> on <%= date.in_time_zone('Buenos Aires').to_time.strftime('%B %e at %l:%M %p') %></small>

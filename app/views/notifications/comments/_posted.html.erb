@@ -1,7 +1,7 @@
 <%= link_to recipe_path(notification.notifiable.recipe, anchor: dom_id(notification.notifiable)), class: "dropdown-item #{"unread" if !notification.read_at?}" do %>
   <div class="media">
     <div class="media-body">
-      <span class="small text-muted"><%= notification.created_at.to_time.strftime('%B %e at %l:%M %p') %></span>
+      <span class="small text-muted"><%= notification.created_at.in_time_zone('Buenos Aires').to_time.strftime('%B %e at %l:%M %p') %></span>
       <p>
         <strong><%= notification.actor.username %></strong> hizo un comentario en la receta: <strong><%= notification.notifiable.recipe.name %></strong>
       </p>
