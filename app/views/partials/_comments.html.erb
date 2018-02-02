@@ -4,7 +4,7 @@
     <!-- <div class="comment"> -->
         <div class="row">
             <div class="col-md-12">
-                <div class="card bg-light card-body my-1 comment">
+                <div class="card bg-light card-body my-1 comment" id="comment_<%= comment.id %>">
 
                     <h4 class="card-title page-header"><%= render :partial => 'partials/user_date', :locals => {:user => comment.user, :date => comment.created_at} %></h4>
                      <div class="card-body">

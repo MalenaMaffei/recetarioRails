@@ -2,7 +2,8 @@ class User < ApplicationRecord
     has_secure_password
     has_many :comments
     has_many :recipes
-
+    has_many :notifications, foreign_key: :recipient_id
+    
     before_save {self.email = email.downcase}
 
 

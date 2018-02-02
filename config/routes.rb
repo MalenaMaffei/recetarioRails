@@ -22,7 +22,12 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :notifications, only: [:index]
+  # resources :notifications, only: [:index]
+  resources :notifications do
+      collection do
+          post :mark_as_read
+      end
+  end
 
   get ':token', :to => 'recipes#show_shareable'
 

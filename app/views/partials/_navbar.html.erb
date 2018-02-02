@@ -12,6 +12,21 @@
       </form> -->
     </ul>
     <ul class="navbar-nav ml-auto my-2 mx-5">
+      <li class="nav-item dropdown" data-behavior="notifications">
+        <a href="" data-behavior="notifications-link" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button"  id="dropdown02">
+          <span><%= fa_icon "bell" %></span>
+          <span class="badge badge-pill badge-secondary" data-behavior="unread-count"></span>
+        </a>
+        <div id="notifications" class="dropdown-menu" aria-labelledby="dropdown02" data-behavior="notification-items">
+            <% if current_user.notifications.unread.empty? %>
+              <p class="small text-muted mx-2">No hay notificaciones.</p>
+            <% end %>
+        </div>
+      </li>
+
+
+
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= current_username %></a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
