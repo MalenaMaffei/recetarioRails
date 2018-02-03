@@ -50,10 +50,10 @@
 * https://themeforest.net/item/recipe-food-bootstrap-template/19150443?s_rank=4
 
 
+* https://thinkflipp.com/work/
 
 
-
-
+* menu categorias no se ve bien en celular
 
 # usabilidad
 Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...

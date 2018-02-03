@@ -1,5 +1,5 @@
 body {
-    background: #DECEB9 image-url('body.jpg') 0 0 repeat;
+    background-image: image-url('fondo.png');
 }
 
 // .container {
@@ -44,19 +44,6 @@ small {
 .unread {
     border-left: 5px $secondary-color solid;
 }
-
-
-.fa-chevron-left {
-  margin-left: -1.5em;
-  margin-right: 0.5em;
-}
-
-.categories{
-  .list-group-item {
-    padding-left: 2em;
-  }
-}
-
 
 // ************************ ESTO ES SOLO DE LA RECETA *****************************
 
@@ -130,7 +117,7 @@ h1, h3 {
 }*/
 .instrucciones::first-letter {
   font-family: cursive;
-  font-size: 170%;
+  font-size: 200%;
   color: #F86223;
 }
 
