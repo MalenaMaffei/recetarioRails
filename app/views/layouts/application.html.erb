@@ -46,7 +46,7 @@
 
 $('.clipboard-btn').tooltip({
   trigger: 'click',
-  placement: 'left'
+  placement: 'right'
 });
 
 function setTooltip(btn, message) {
@@ -66,7 +66,7 @@ function hideTooltip(btn) {
 var clipboard = new Clipboard('.clipboard-btn');
 
 clipboard.on('success', function(e) {
-  setTooltip(e.trigger, 'Copiado!');
+  setTooltip(e.trigger, 'Link copiado!');
   hideTooltip(e.trigger);
 });
 

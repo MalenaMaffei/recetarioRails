@@ -3,6 +3,7 @@
 
 * volver atras link que te lleve atras si estabas en el dominio de las recetas, sino que te lleve a recipes_path
 * muy villa el select de las categorias, ver si se puede hacer mas elegante
+* ver que onda de ir borrando las  notificaciones de la db
 
 # Features
 
@@ -17,26 +18,10 @@
 
 * Al buscar, que busque en todo, pero si yo en el sidebar elijo lo que sea, que filtre a esas recetas dentro de la busqueda, si es posible.
 
-
-* tipo ml campanita con notificaciones de comentarios que se hicieron en tu receta.:
-        https://github.com/rails-engine/notifications
-        https://github.com/simukappu/activity_notification
-        https://gorails.com/episodes/in-app-navbar-notifications
-        http://api.rubyonrails.org/v5.0/classes/ActiveSupport/Notifications.html
-        http://aalvarez.me/blog/posts/easy-notification-system-in-rails.html
-
-
-        * casi listo, terminar de arreglar el tema de que no funciona bien cuando las toma a cada intervalo.
-        * ver que onda de ir borrandolas de la db
-
-
-
 * avisar que alguien hizo una nueva version?
-* centrar search form
+
 
 * crear link en administrar para administrar tu usuario
-
-* que los comentarios se hagan en real time... un poco exagerado, pero para probarlo.
 
 * crear categoria desde creando una receta -> empece pero tengo un problema con los redirects.
         http://flaviusim.com/blog/2012/05/28/create-new-records-with-bootstrap-modal-and-unobtrusive-javascript-in-rails/
@@ -64,7 +49,7 @@
 * https://themeforest.net/item/socialchef-social-recipe-html-template/8568727?s_rank=3
 * https://themeforest.net/item/recipe-food-bootstrap-template/19150443?s_rank=4
 
-* NO ENTRA DEL TODO LA NOTIFICACION EN EL CELU, ARREGLAR
+
 
 
 
@@ -78,8 +63,6 @@ Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
 * SACAR CATEGORIAS para todos excepto admin, si es que logro hacer lo del modal... tengo que ver como no hacer un redirect despues de la accion
 
 * Hacer que el admin pueda ver las recetas de cada user.
-
-* Sacar lo de que se abra el modal para poder compartir, y por ahi poner un tooltip mas informativo
 
 # Pruebas
 

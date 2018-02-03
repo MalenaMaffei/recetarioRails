@@ -11,9 +11,13 @@
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <%= link_to "Nueva Version", new_version_recipe_path(@recipe), :class => 'btn btn-secondary' %>
-            <%= link_to raw("Compartir <i class='fa fa-link'></i>"), '#', data: {toggle: "modal", target: "#exampleModal"}, :class => 'btn btn-outline-primary' %>
+            <%# link_to raw("Compartir <i class='fa fa-link'></i>"), '#', data: {toggle: "modal", target: "#exampleModal"}, :class => 'btn btn-outline-success' %>
+            <button class="btn btn-outline-success clipboard-btn" data-clipboard-action="copy" data-clipboard-text="<%= request.base_url %>/<%= @recipe.token %>">
+              Compartir <%= fa_icon "link" %>
+            </button>
+            <%# link_to raw("Compartir <i class='fa fa-link'></i>"), '#', data: {clipboard_text: request.base_url + '/' + @recipe.token }, :class => 'btn btn-outline-success clipboard-btn' %>
         </div>
-        <div class="col-md-6 col-sm-12 mt-2">
+        <div class="col-md-6 col-sm-12 mt-2 mt-md-0">
             <% if allowed?(@recipe.user) %>
                 <%= render :partial => 'partials/edit_delete', :locals => {:edit => edit_recipe_path(@recipe), :delete => recipe_path(@recipe)} %>
             <% end %>
