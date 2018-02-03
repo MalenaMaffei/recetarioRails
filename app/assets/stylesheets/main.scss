@@ -68,7 +68,8 @@ p, li {
     padding: 0.5em 0.6em;
 }
 h1, h3 {
-  font-family: Snell Roundhand, cursive;
+  // font-family: Snell Roundhand, cursive;
+  font-family: $font-headers;
 }
 .fa-cutlery {
   float: left;
@@ -129,7 +130,7 @@ h1, h3 {
     text-indent: -1em;
 }*/
 .instrucciones::first-letter {
-  font-family: cursive;
+  font-family: $font-headers;
   font-size: 170%;
   color: #F86223;
 }
