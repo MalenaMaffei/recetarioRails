@@ -44,7 +44,10 @@
 
 # estilo
 * Errores que se pongan rojas las forms
-* dejar fijas las fonts
+
+* elegi un par, por ahora me gusta pero ver que onda despues
+
+
 * Texto debajo del logo de recetas.
 * https://themeforest.net/item/socialchef-social-recipe-html-template/8568727?s_rank=3
 * https://themeforest.net/item/recipe-food-bootstrap-template/19150443?s_rank=4
