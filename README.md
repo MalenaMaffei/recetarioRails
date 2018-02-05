@@ -51,7 +51,8 @@
 * Texto debajo del logo de recetas.
 * https://themeforest.net/item/socialchef-social-recipe-html-template/8568727?s_rank=3
 * https://themeforest.net/item/recipe-food-bootstrap-template/19150443?s_rank=4
-
+* https://wpgeeky.com/html/food/food/recipe-index1.html
+* http://www.themeenergy.com/themes/html/social-chef/recipes.html
 
 * https://thinkflipp.com/work/
 
