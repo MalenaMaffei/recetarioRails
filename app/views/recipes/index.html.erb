@@ -18,7 +18,12 @@
                       <div class="col-md-4">
                         <figure>
                           <%= link_to recipe_path(recipe), :style => "text-decoration: none;" do %>
-                                <%= image_tag recipe.image.exists? ? recipe.image.url(:medium) : 'default.jpeg', :width => '100%' %>
+                                <% if recipe.image.exists? %>
+                                    <%= image_tag  recipe.image.url(:medium), :width => '100%'%>
+                                <% else %>
+                                    <%= image_link_to 'default.jpeg', recipe_path(recipe), :width => '100%'%>
+                                <% end %>
+
                               <figcaption style="background:white; padding: 1em; text-align: center;">
                                 <h5><%= recipe.name %></h5>
                                 <small><%= recipe.category.name %> | <%= recipe.user.username %></small>
