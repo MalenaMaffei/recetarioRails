@@ -7,13 +7,25 @@ class RecipesController < ApplicationController
 
   def index
       @categories = Category.sorted
+      @results = {}
       if params[:search]
-          @recipes = Recipe.search(params[:search]).sorted
+          # @recipes = Recipe.search(params[:search]).sorted
+          @categories.each do |category|
+            @results[category.name] = category.recipes.search(params[:search]).sorted
+          end
       elsif params[:user]
-          @recipes = Recipe.where(:user => params[:user]).includes(:category).order("categories.name ASC").sorted
+          # @recipes = Recipe.where(:user => params[:user]).includes(:category).order("categories.name ASC").sorted
+          @categories.each do |category|
+            @results[category.name] = category.recipes.where(:user => params[:user]).sorted
+          end
       else
-          @recipes = Recipe.includes(:category).order("categories.name ASC").sorted
+          @categories.each do |category|
+            @results[category.name] = category.recipes.sorted
+          end
+          # @recipes = Recipe.includes(:category).order("categories.name ASC").sorted
       end
+
+
 
   end
 

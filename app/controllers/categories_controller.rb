@@ -6,7 +6,9 @@ class CategoriesController < ApplicationController
   def show
       @category = Category.find(params[:id])
       @categories = Category.sorted
-      @recipes = @category.recipes
+      @results = {}
+      # @recipes = @category.recipes
+      @results[@category.name] = @category.recipes
       render('recipes/index')
   end
 
