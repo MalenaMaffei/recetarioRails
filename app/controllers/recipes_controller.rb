@@ -57,6 +57,7 @@ class RecipesController < ApplicationController
 
   def create
     ingredients = recipe_params[:ingredients].split(',')
+
     # ingredients.map!(&:strip)
     # @recipe = Recipe.new(recipe_params.merge({ingredients:ingredients}))
     # @recipe.save
@@ -66,6 +67,9 @@ class RecipesController < ApplicationController
 
     @user = current_user
     @recipe = @user.recipes.build(recipe_params.merge({ingredients:ingredients}))
+    if params[:recipe][:image].blank?
+           @recipe.image = nil
+    end
     # @recipe.instructions = simple_format(@recipe.instructions)
     @recipe.save
     # valid_record?(@recipe, "Receta '#{@recipe.name}' creada exitosamente.", recipe_path(@recipe), 'new')
