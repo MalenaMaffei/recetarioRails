@@ -1,5 +1,5 @@
 <div class="card card-body bg-light">
-<%= form_for recipe do |f| %>
+<%= form_for recipe, html: { multipart: true } do |f| %>
   <%= error_messages_for(f.object) %>
 
   <div class="row">
@@ -36,6 +36,14 @@
     <%= f.label "Instrucciones", :class => "font-weight-bold" %>
     <%= f.text_area :instructions, :class => 'form-control', :size => '10x8'%>
   </div>
+
+  <div class="form-group">
+    <%= f.label "Foto" %>
+    <%= f.file_field :image %>
+  </div>
+  <% if recipe.image.exists? %>
+     <%= image_tag recipe.image.url, :width => '100%' %>
+  <% end %>
 
   <%= f.submit "Aceptar", :class => 'btn btn-success' %>
   <%= link_to "Cancelar", recipes_path, :class => 'btn btn-outline-primary' %>

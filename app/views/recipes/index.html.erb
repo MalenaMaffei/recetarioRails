@@ -6,23 +6,56 @@
       <%= render(:partial => 'partials/select_category') %>
     </div>
     <div class="col-md-9 col-sm-12">
-      <div class="card card-body bg-light">
-        <h2 class="card-title">Recetas</h2>
-        <table class="table">
-            <tr>
-                <th>Nombre</th>
-                <th>Categoría</th>
-            </tr>
-            <% @recipes.each do |recipe| %>
-                <tr>
-                    <td><%= link_to recipe.name, recipe_path(recipe)%></td>
-                    <td><%= recipe.category.name %></td>
-                </tr>
+      <!-- <div class="card card-body bg-light"> -->
+        <h2>Recetas</h2>
+            <% @categories.each do |category| %>
+                <h4 class="category-header"><span><%= category.name %></span></h4>
+                <% category.recipes.each_slice(3) do |recipe_pair| %>
+                  <div class="row">
+                    <% recipe_pair.each do |recipe| %>
+                      <div class="col-md-4">
+                        <figure>
+                          <%= link_to recipe_path(recipe), :style => "text-decoration: none;" do %>
+                              <%# if recipe.image.exists? %>
+                                <%= image_tag recipe.image.url(:medium), :width => '100%' %>
+                              <%# end %>
+                              <figcaption style="background:white; padding: 1em; text-align: center;">
+                                <h5><%= recipe.name %></h5>
+                                <small><%= recipe.category.name %> | <%= recipe.user.username %></small>
+                              </figcaption>
+                          <% end %>
+                        </figure>
+
+                      </div>
+                    <% end %>
+                  </div>
+                <% end %>
             <% end %>
-        </table>
-      </div>
+
+
+      <!-- </div> -->
     </div>
     <div class="col-md-3 fixed d-none d-md-block">
       <%= render(:partial => 'partials/sidebar') %>
     </div>
 </div>
+
+
+
+
+
+
+
+
+<!-- <table class="table">
+    <tr>
+        <th>Nombre</th>
+        <th>Categoría</th>
+    </tr>
+    <% @recipes.each do |recipe| %>
+        <tr>
+            <td><%# link_to recipe.name, recipe_path(recipe)%></td>
+            <td><%# recipe.category.name %></td>
+        </tr>
+    <% end %>
+</table> -->

@@ -5,10 +5,19 @@ class Recipe < ApplicationRecord
     belongs_to :user
     has_many :comments, dependent: :destroy # destruyo los comentarios de esta receta si la borro
 
+
+
+
+
     before_validation :generate_token, on: :create
 
     validates :token, presence: true
     validates :token, uniqueness: true
+
+
+
+    has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => ':style/default.jpeg'
+    validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
     validates :name, :presence => true, :length => { :minimum => 3 }
     validates :ingredients, :presence => true, :length => { :minimum => 1 }
@@ -28,6 +37,7 @@ class Recipe < ApplicationRecord
         self.token = SecureRandom.urlsafe_base64(16, false)
       end while self.class.find_by(token: token)
     end
+
 
     # def to_param
     #   token

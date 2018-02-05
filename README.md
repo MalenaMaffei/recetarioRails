@@ -68,6 +68,10 @@ Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
 
 * Hacer que el admin pueda ver las recetas de cada user.
 
+* que cuando te muestre todas las recetas de las divida por cats
+
+* dividir los enters en pasos numerados
+
 # Pruebas
 
 

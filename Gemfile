@@ -34,7 +34,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 4.0.0.beta3'
 gem 'font-awesome-rails'
 gem 'clipboard-rails'
-
+gem 'paperclip'
 
 
 # Use Capistrano for deployment

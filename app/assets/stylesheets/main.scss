@@ -58,6 +58,39 @@ small {
 }
 
 
+
+h4.category-header  {
+  font-family: $font-headers;
+  position: relative;
+      overflow: hidden;
+      // color: #444;
+      // color: #a1a1a1;
+      color: #3b3b3b;
+      span {
+          display: inline-block;
+          vertical-align: baseline;
+          zoom: 1;
+          *display: inline;
+          *vertical-align: auto;
+          position: relative;
+          padding-right: 40px;
+
+          &:after {
+              content: '';
+              display: block;
+              width: 1000px;
+              position: absolute;
+              top: 0.73em;
+              border-top: 2px solid $primary-color;
+              // border-top: 2px solid #a1a1a1;
+              // border-top: 2px solid #444;
+          }
+
+          &:before { right: 100%; }
+          &:after { left: 100%; }
+      }
+}
+
 // ************************ ESTO ES SOLO DE LA RECETA *****************************
 
 p, li {

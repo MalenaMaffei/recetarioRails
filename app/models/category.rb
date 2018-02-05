@@ -1,4 +1,6 @@
 class Category < ApplicationRecord
+
+
     before_destroy :default_category
     has_many :recipes, dependent: :nullify
     before_validation :titleize_name, on: :create

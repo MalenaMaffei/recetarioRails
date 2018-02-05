@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180201143048) do
+ActiveRecord::Schema.define(version: 20180205170830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,9 +50,13 @@ ActiveRecord::Schema.define(version: 20180201143048) do
     t.integer  "category_id"
     t.integer  "user_id"
     t.string   "token"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.time     "time"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.index ["parent_id", "category_id", "user_id"], name: "index_recipes_on_parent_id_and_category_id_and_user_id", using: :btree
     t.index ["token"], name: "index_recipes_on_token", unique: true, using: :btree
   end
