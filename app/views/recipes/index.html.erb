@@ -5,42 +5,38 @@
     <div class="col-md-12 fixed d-md-none">
       <%= render(:partial => 'partials/select_category') %>
     </div>
-    <div class="col-md-9 col-sm-12">
-      <!-- <div class="card card-body bg-light"> -->
-        <h2>Recetas</h2>
-            <% @results.each do |category, recipes| %>
+
+        <div class="col-md-9 col-12 ">
+                <% @results.each do |category, recipes| %>
                 <% next if recipes.empty? %>
-                <h4 class="category-header"><span><%= category %></span></h4>
-                <% recipes.each_slice(3) do |recipe_pair| %>
+                <h4 class="category-header mt-2"><span><%= category %></span></h4>
+                <div class="card-deck">
+                    <% recipes.each do |recipe| %>
 
-                  <div class="row">
-                    <% recipe_pair.each do |recipe| %>
-                      <div class="col-md-4">
-                        <figure>
-                          <%= link_to recipe_path(recipe), :style => "text-decoration: none;" do %>
-                                <% if recipe.image.exists? %>
-                                    <%= image_tag  recipe.image.url(:medium), :width => '100%'%>
-                                <% else %>
-                                    <%# image_link_to 'default.jpeg', recipe_path(recipe), :width => '100%'%>
-                                <% end %>
+                        <div class="card my-2 recipe-card">
 
-                              <figcaption style="background:white; padding: 1em; text-align: center;">
-                                <h5><%= recipe.name %></h5>
-                                <small><%= recipe.category.name %> | <%= recipe.user.username %></small>
-                              </figcaption>
-                          <% end %>
-                        </figure>
+                            <!-- <img src="http://placehold.it/560x560" class="card-img-top"> -->
+                            <%# image_link_to 'default.jpeg', recipe_path(recipe), :width => '100%'%>
+                            <div class="card-body">
+                              <%= link_to recipe_path(recipe), :style => "text-decoration: none;" do %>
+                                <h5 class="card-title"><%= recipe.name %></h5>
+                              <% end %><!-- end link_to -->
+                            </div>
+                            <div class="card-footer">
+                                <small class="recipe-info"><span class="span-footer"><%= recipe.category.name %></span><span class="font-weight-bold"> | </span><span class="span-footer font-weight-bold"><%= recipe.user.username %></span></small>
+                            </div>
 
-                      </div>
-                    <% end %>
-                  </div>
-                <% end %>
-            <% end %>
+                        </div>
+
+                    <% end %> <!-- recipe.each end -->
+
+            </div> <!-- end card deck -->
+            <% end %> <!-- termina results.each -->
+
+        </div>
+        <div class="col-md-3 fixed d-none d-md-block">
+          <%= render(:partial => 'partials/sidebar') %>
+        </div>
 
 
-      <!-- </div> -->
-    </div>
-    <div class="col-md-3 fixed d-none d-md-block">
-      <%= render(:partial => 'partials/sidebar') %>
-    </div>
 </div>
