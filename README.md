@@ -13,6 +13,12 @@
 
 # Features
 
+* https://coderwall.com/p/rqjjca/creating-a-scoped-invitation-system-for-rails
+* https://github.com/tomichj/invitation
+* https://github.com/scambra/devise_invitable
+
+
+
 * crear pdf con recetas
 
 
