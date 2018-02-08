@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  get 'sign_up' => 'devise/access#new', :as => 'sign_up'
+  # devise_for :users
   get 'comments/create'
+
 
 
   post 'access/attempt_login'
@@ -20,7 +22,6 @@ Rails.application.routes.draw do
       get :new_version, on: :member
       resources :comments
   end
-
   resources :users
 
   # resources :notifications, only: [:index]

@@ -44,7 +44,9 @@ Rails.application.configure do
     :domain             => 'gmail.com', #you can also use google.com
     :authentication     => :plain,
     :user_name          => 'recetasdeabu@gmail.com',
-    :password           => 'maleines2412'
+    :password           => 'maleines2412',
+    # :authentication     => 'login',
+    # :enable_starttls_auto => 'true'
   }
 
 
