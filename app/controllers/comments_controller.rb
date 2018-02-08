@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
+    before_action :authenticate_user!
     before_action :confirm_permissions, :only => [:destroy]
-
     def create
         # @recipe = Recipe.find(params[:post_id])
         # @comment = @recipe.comments.create(comment_params)

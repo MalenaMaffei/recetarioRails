@@ -2,6 +2,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # before_action :confirm_logged_in, :except => [:login, :attempt_login, :logout, :show_shareable]
+  before_action :authenticate_user!
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+
 
   # ADMIN = 'male'
 
@@ -29,6 +33,14 @@ class ApplicationController < ActionController::Base
   #     false
   #   end
   # end
+
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
+  end
+
 
   private
   def confirm_logged_in

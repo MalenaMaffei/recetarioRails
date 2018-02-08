@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+   # before_action :authenticate_user!    
   before_action :confirm_permissions, :except => [:show]
   def index
       @users = User.all

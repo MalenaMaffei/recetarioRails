@@ -3,11 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-    has_secure_password
+    # has_secure_password
     has_many :comments
     has_many :recipes
     has_many :notifications, foreign_key: :recipient_id
-    
+
     before_save {self.email = email.downcase}
 
 

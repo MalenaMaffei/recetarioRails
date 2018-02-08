@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
-  get 'sign_up' => 'devise/access#new', :as => 'sign_up'
+
+  # get 'logout' => 'users/sessions#destroy', :as => 'logout'
+  # Rails.application.routes.draw do
+    devise_for :users, controllers: {
+      sessions: 'users/sessions',
+      registrations: 'users/registrations'
+    }
+  # end
+
   # devise_for :users
   get 'comments/create'
 
@@ -8,7 +16,6 @@ Rails.application.routes.draw do
 
   post 'access/attempt_login'
 
-  get 'logout' => 'access#logout', :as => 'logout'
 
   get 'login' => 'access#login', :as => 'login'
 

@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   layout "shared", only: [:show_shareable]
-
+  before_action :authenticate_user!
   before_action :confirm_permissions, :only => [:edit, :update, :destroy]
 
 
