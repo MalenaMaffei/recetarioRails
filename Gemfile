@@ -35,7 +35,7 @@ gem 'bootstrap', '~> 4.0.0.beta3'
 gem 'font-awesome-rails'
 gem 'clipboard-rails'
 gem 'paperclip'
-
+gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
