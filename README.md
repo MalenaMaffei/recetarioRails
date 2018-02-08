@@ -84,8 +84,8 @@ Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
 
 # Pruebas
 
-
-
+# FUTURO
+Hacer el tutorial de rails + ember para ver como integrar api con front end
 
 # No pasadas:
 Me quede en Vinagreta para Carpaccio de Salmon
