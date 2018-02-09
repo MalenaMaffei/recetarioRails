@@ -1,5 +1,20 @@
 module ApplicationHelper
 
+
+    
+    def user_signed_in?
+      !!current_user
+    end
+
+    def current_user
+      @current_user ||= warden.authenticate(:scope => :user)
+    end
+
+    def user_session
+      current_user && warden.session(:user)
+    end
+
+
     # ADMIN = 'male'
 
     def error_messages_for(object)

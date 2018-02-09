@@ -20,4 +20,12 @@ class User < ApplicationRecord
     validates_format_of :email, :with => EMAIL_REGEX
     # validates_confirmation_of :email
 
+
+    # class << self
+    #   def serialize_from_session(key,salt)
+    #     record = to_adapter.get(key[0].to_param)
+    #     record if record && record.authenticatable_salt == salt
+    #   end
+    # end
+
 end

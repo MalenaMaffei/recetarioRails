@@ -1,6 +1,6 @@
 # class AccessController < ApplicationController
-class AccessController < Devise::RegistrationsController
-    layout 'access'
+# class AccessController < Devise::RegistrationsController
+#     layout 'access'
     # def login
     #     #login form
     # end
@@ -28,4 +28,4 @@ class AccessController < Devise::RegistrationsController
     #   flash[:notice] = 'Vuelva Prontos!'
     #   redirect_to(login_path)
     # end
-end
+# end

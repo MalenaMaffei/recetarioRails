@@ -1,5 +1,5 @@
 class NotificationsController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   before_action :set_notifications
 
   def index
@@ -14,7 +14,7 @@ class NotificationsController < ApplicationController
 
   def set_notifications
     # @notifications = Notification.where(recipient: current_user).unread
-    @notifications =  Notification.where(recipient: current_user).active.newest_first
+    @notifications =  Notification.where(recipient: helpers.current_user).active.newest_first
 
   end
 

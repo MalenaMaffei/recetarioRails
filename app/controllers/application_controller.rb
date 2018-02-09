@@ -1,9 +1,28 @@
+
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  # protect_from_forgery with: :exception
 
   # before_action :confirm_logged_in, :except => [:login, :attempt_login, :logout, :show_shareable]
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
+
+
+# 
+#   def helper_user_signed_in?
+#     helpers.user_signed_in?
+#   end
+#
+#   def helper_current_user
+#     helpers.current_user
+#   end
+# alias_method :current_user, :helper_current_user
+#   def helper_user_session
+#     helpers.user_session
+#   end
+
+
+
+
 
 
 

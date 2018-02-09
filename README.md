@@ -16,6 +16,10 @@
 * https://coderwall.com/p/rqjjca/creating-a-scoped-invitation-system-for-rails
 * https://github.com/tomichj/invitation
 * https://github.com/scambra/devise_invitable
+* https://stackoverflow.com/questions/7609483/create-groups-that-users-can-join-what-would-be-a-good-approach
+
+* Compartir en facebook: https://stackoverflow.com/questions/5340109/sharing-articles-on-facebook-using-the-facebook-api
+    * Titulo compartir: boton link, boton facebook
 
 
 
@@ -96,4 +100,6 @@ Me quede en Vinagreta para Carpaccio de Salmon
 # GEneral
 flash redirect que tenga para si es alert o danger o no se que
 
-VIDEO: 22 PROFESSIONAL RUBY DEV
+# GROUPS
+
+De Ahora en mas solo tiene que pullear todo depende de que usuario esta conectado. Las categorias y recetas tienen que estar scoped dentro de grupos. Los usuarios tienen que estar sueltos.

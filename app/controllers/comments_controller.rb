@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-    before_action :authenticate_user!
+    # before_action :authenticate_user!
     before_action :confirm_permissions, :only => [:destroy]
     def create
         # @recipe = Recipe.find(params[:post_id])
@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
 
         @recipe = Recipe.find(params[:recipe_id])
         @comment = @recipe.comments.build(comment_params)
-        @comment.user_id = current_user.id
+        @comment.user_id = helpers.current_user.id
         @comment.save!
         # valid_record?(@comment, "Comentario posteado exitosamente.", post_path(@post), '')
         flash_redirect('Comment Added', recipe_path(@recipe))

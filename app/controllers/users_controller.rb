@@ -42,7 +42,7 @@ class UsersController < ApplicationController
 
   def confirm_permissions
       # user = User.find(params[:id])
-      unless current_user.admin?
+      unless helpers.current_user.admin?
         flash_redirect("No tenes permisos para realizar esa accion.", root_path)
       end
     end

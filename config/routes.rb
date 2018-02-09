@@ -14,10 +14,10 @@ Rails.application.routes.draw do
 
 
 
-  post 'access/attempt_login'
+  # post 'access/attempt_login'
 
 
-  get 'login' => 'access#login', :as => 'login'
+  # get 'login' => 'access#login', :as => 'login'
 
 
 

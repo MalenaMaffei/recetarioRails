@@ -1,9 +1,20 @@
+# include Devise::Controllers::Helpers
 class RecipesController < ApplicationController
   layout "shared", only: [:show_shareable]
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   before_action :confirm_permissions, :only => [:edit, :update, :destroy]
 
-
+  # def user_signed_in?
+  #   !!current_user
+  # end
+  #
+  # def current_user
+  #   @current_user ||= warden.authenticate(scope: => :user)
+  # end
+  #
+  # def user_session
+  #   current_user && warden.session(:user)
+  # end
 
   def index
       @categories = Category.sorted
@@ -65,7 +76,8 @@ class RecipesController < ApplicationController
 
 
 
-    @user = current_user
+    @user = helpers.current_user
+    byebug
     @recipe = @user.recipes.build(recipe_params.merge({ingredients:ingredients}))
     if params[:recipe][:image].blank?
            @recipe.image = nil
