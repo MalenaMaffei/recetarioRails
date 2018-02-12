@@ -114,6 +114,14 @@ De Ahora en mas solo tiene que pullear todo depende de que usuario esta conectad
 
 
 * agregar fk a cat de su grupo.
+* hacer entidad recipeGroup con fk a cat fk a R y fk a grupo
+* sacar col cat_id de R, ya no lo necesita
+* RG has user through Recipe
+* RG builds R
+
+
+
+
 * poner las relaciones en el modelo:
     * has many & belongs to many de user a group :through memberships
     * category has group...
@@ -126,3 +134,8 @@ De Ahora en mas solo tiene que pullear todo depende de que usuario esta conectad
     * el admin real no deberia poder editar y borrar lo de los demas...
 
 * yo tendria que tener una cuenta superadmin para entrar a todas las rutas y por ahi eventualmente tener un mega dashboard
+
+* grupos pueden tener el mismo nombre
+* solo te pueden invitar por mail, vos no podes pedir entrar y los demas no te pueden invitar
+
+* crear welcome controller que te guie para que hagas un grupo e invites a tus amigos
