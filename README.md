@@ -5,11 +5,11 @@
 * muy villa el select de las categorias, ver si se puede hacer mas elegante
 * ver que onda de ir borrando las  notificaciones de la db
 
-
+* INTERNATIONALIZATION
 
 * FOTOS no estarian funcionando bien... no se por que carajo heroku dejo de compilarlas
 
-
+* categorias: cuando borro una categoria deberia ir a una categoria universal "SIN CATEGORIA" o algo asi... nadie puede acceder a ella, no pertenece a ningun grupo
 
 # Features
 
@@ -17,17 +17,16 @@
 * https://github.com/tomichj/invitation
 * https://github.com/scambra/devise_invitable
 * https://stackoverflow.com/questions/7609483/create-groups-that-users-can-join-what-would-be-a-good-approach
+https://stackoverflow.com/questions/11600928/when-should-one-use-a-has-many-through-relation-in-rails
 
 * Compartir en facebook: https://stackoverflow.com/questions/5340109/sharing-articles-on-facebook-using-the-facebook-api
     * Titulo compartir: boton link, boton facebook
 
-
+* en categories view un contador de cuantas recetas hay de ese tipo/
 
 * crear pdf con recetas
 
 
-* poner todas las relaciones en los modelos cuando este todo listo
-* no categorias duplicadas
 * chequear nombres de recetas parecidas
 
 * moidalidad instertar receta? te aparece un pop up para buscar recetas y la que elegis te la pega como hipervinculo, despues le pongo raw en el output i guess.
@@ -58,7 +57,12 @@
 * google o facebook auth
 
 
+* cuando pases una receta de un gruop a otro, si ya tiene la misma categoria, dejarla
+
+
 # estilo
+
+* copiar la division entre notifs user y favs de ml
 * Errores que se pongan rojas las forms
 * Texto debajo del logo de recetas.
 * elegi un par, por ahora me gusta pero ver que onda despues
@@ -71,7 +75,11 @@
     * https://thinkflipp.com/work/
 
 
-* menu categorias no se ve bien en celular
+* flex box no se ve bien en celus viejos https://stackoverflow.com/questions/24899943/how-do-i-make-flex-box-work-in-safari
+https://github.com/postcss/autoprefixer/issues/786
+
+    en realidad lo que tengo quehacer aca es que para xs directamente use rows y no flexbox, creo que ya lo hice, cuando vuelva a subir todo, veremos
+
 
 # usabilidad
 Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
@@ -103,3 +111,18 @@ flash redirect que tenga para si es alert o danger o no se que
 # GROUPS
 
 De Ahora en mas solo tiene que pullear todo depende de que usuario esta conectado. Las categorias y recetas tienen que estar scoped dentro de grupos. Los usuarios tienen que estar sueltos.
+
+
+* agregar fk a cat de su grupo.
+* poner las relaciones en el modelo:
+    * has many & belongs to many de user a group :through memberships
+    * category has group...
+
+* cuando hago una receta en un grupo, se me guarda en mis recetas obviamente, se generan los dos recursos, receta y recetaDeGrupo.
+* que me obligue a crear un grupo si me mando a hacer recetas sin grupo, asi despues de ultima voy agregando gente a mi grupo.
+* admin dashboard para ver todos los usuarios y cambiar nombre al grupo
+* quien puede mandar invitacoines? todos?:
+    * yo diria que si, pero el admin puede echar a quien sea
+    * el admin real no deberia poder editar y borrar lo de los demas...
+
+* yo tendria que tener una cuenta superadmin para entrar a todas las rutas y por ahi eventualmente tener un mega dashboard

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180208203620) do
+ActiveRecord::Schema.define(version: 20180211162320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,21 @@ ActiveRecord::Schema.define(version: 20180208203620) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["recipe_id", "user_id"], name: "index_comments_on_recipe_id_and_user_id", using: :btree
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.string   "name",       default: "", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "memberships", force: :cascade do |t|
+    t.boolean  "admin",      default: false
+    t.integer  "group_id"
+    t.integer  "user_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.index ["group_id", "user_id"], name: "index_memberships_on_group_id_and_user_id", using: :btree
   end
 
   create_table "notifications", force: :cascade do |t|

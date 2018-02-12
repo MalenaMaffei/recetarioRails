@@ -36,7 +36,7 @@ gem 'font-awesome-rails'
 gem 'clipboard-rails'
 gem 'paperclip'
 gem 'devise'
-
+gem 'social-share-button'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
