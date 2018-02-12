@@ -15,6 +15,7 @@
             <button class="btn btn-outline-success clipboard-btn" data-clipboard-action="copy" data-clipboard-text="<%= request.base_url %>/<%= @recipe.token %>">
               Compartir <%= fa_icon "link" %>
             </button>
+            <%# social_share_button_tag(@recipe.name, :url => request.base_url +  "/"+ @recipe.token) %>
             <%# link_to raw("Compartir <i class='fa fa-link'></i>"), '#', data: {clipboard_text: request.base_url + '/' + @recipe.token }, :class => 'btn btn-outline-success clipboard-btn' %>
         </div>
         <div class="col-md-6 col-sm-12 mt-2 mt-md-0">
