@@ -7,9 +7,6 @@
 
 
 
-* FOTOS no estarian funcionando bien... no se por que carajo heroku dejo de compilarlas
-
-
 
 # Features
 
@@ -71,8 +68,6 @@
     * https://thinkflipp.com/work/
 
 
-*  notifs ver que usar para no leidas
-* Cambiar la letra de comentarios y poner el separador finito
 
 # usabilidad
 Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
