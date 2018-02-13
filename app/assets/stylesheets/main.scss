@@ -29,9 +29,6 @@ nav {
         a.nav-link{
           color:white !important;
           vertical-align: top;
-          // display: inline-block;
-          text-align: center;
-          // width: 50px;
           .caption {
               display: block;
               // word-break: break-word;
@@ -62,6 +59,17 @@ nav {
         font-size: 1.5em;
         margin-left: -0.5em;
         margin-top: 10%;
+        &#notif  {
+          vertical-align: top;
+          // display: inline-block;
+          text-align: center;
+        }
+        .caption {
+            display: block;
+        }
+        .badge {
+          // background-color: $secondary-color;
+        }
     }
 }
 
@@ -148,12 +156,26 @@ h4.category-header  {
 
 
 small {
-    color: white;
-    background: $primary-color-lighter;
+    strong {
+        color: $primary-color;
+    }
+    // color: white;
+    // background: $primary-color-lighter;
     display: block;
     margin: 10px 0;
     padding: 5px 10px;
 }
+
+.user-info{
+  strong {
+      color: white;
+  }
+  small {
+    color: white;
+    background: $primary-color-lighter;
+  }
+}
+
 
 .comment {
     border-radius: 20px;
@@ -161,7 +183,7 @@ small {
 
 
 .unread {
-    border-left: 5px $secondary-color solid;
+    border-left: 5px $primary-color solid;
 }
 
 
@@ -183,7 +205,22 @@ small {
 
 
 
+// ***** comments **********
 
+.comments {
+  border-top: 1px solid rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px -1px 0px 0px;
+  margin-top: 2em;
+  h3 {
+    margin-top: 0.5em;
+    color: $comment-font-color;
+  }
+}
+
+
+
+
+//********** fin comments
 
 
 // ************************ ESTO ES SOLO DE LA RECETA *****************************
