@@ -9,7 +9,7 @@
         <div class="col-md-9 col-12 ">
                 <% @results.each do |category, recipes| %>
                 <% next if recipes.empty? %>
-                <h4 class="category-header mt-2"><span><%= category %></span></h4>
+                <h4 class="category-header mt-4"><span><%= category %></span></h4>
                 <div class="card-deck">
                     <% recipes.each do |recipe| %>
 

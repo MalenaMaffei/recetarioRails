@@ -1,8 +1,22 @@
-$primary-color: #F86223;
-$secondary-color: #2ca5b9;
+// $primary-color: #F86223;
+$primary-color: #FF7B74;
+$primary-color-dark: #F4716A;
+$primary-color-light: #FF7A73;
+$primary-color-lighter: #FF8E88;
+// $secondary-color: #2ca5b9;
+$secondary-color: #dbbc94;
 $background-dark: #36424a;
-$background-nav: #FFDF6E;
+
+
+
+// $background-nav: #FFDF6E;
+$background-nav: white;
 $background-light: #FFF1BD;
+
+$title-font-color: #666;
+
+$categories-font-color: #777;
 // $font-headers: 'Merriweather', serif;
 $font-headers:  'Lora', serif;
-$theme-colors: ( "primary": $primary-color, "secondary": $secondary-color, "dark": $background-dark);
+$font-default: 'Raleway', Arial, Helvetica, sans-serif;
+$theme-colors: ( "primary": $primary-color, "secondary": $secondary-color, "dark": $background-dark, "success": #00B233, "danger": #CC0000);

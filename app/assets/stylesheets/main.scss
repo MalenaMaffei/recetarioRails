@@ -1,23 +1,142 @@
 body {
     background: #DECEB9 image-url('body.jpg') 0 0 repeat;
+    font-family: $font-default;
 }
 
 // .container {
 //     background: white;
 // }
 
+
+// *******************************   NAVBAR    *************************
 nav {
     background-color: $background-nav;
     .navbar-toggler {
-        border-color: rgba(0, 0, 0, 0.1) !important;
+        &:focus {
+          border: none;
+          outline: none;
+        }
     }
 
-    a {
-        color: $primary-color !important;
+
+    .navbar{}
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-right: 0 !important;
+
+    .square-link {
+      // background-color:black;
+        a.nav-link{
+          color:white !important;
+          vertical-align: top;
+          // display: inline-block;
+          text-align: center;
+          // width: 50px;
+          .caption {
+              display: block;
+              // word-break: break-word;
+              font-weight: 700;
+              font-size: 12px;
+          }
+          text-align: center ;
+
+          text-decoration-line: none ;
+          text-decoration-style: solid ;
+          text-rendering: optimizeLegibility ;
+          text-size-adjust: auto ;
+          text-transform: uppercase ;
+          // word-wrap: break-word;
+
+        }
+        &#new {
+          background-color: $primary-color-dark;
+        }
+        &#user {
+          background-color: $primary-color;
+        }
+
+
     }
 
-
+    .icons {
+        font-size: 1.5em;
+        margin-left: -0.5em;
+        margin-top: 10%;
+    }
 }
+
+
+//********************   FIN NAVBAR   ******************
+
+
+//***** RECIPE INDEX ***************
+.recipe-card{
+  .card-footer{
+    padding: 0;
+
+
+  }
+
+  .card-title {
+    color: $title-font-color;
+  }
+}
+
+.recipe-info {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+span.span-footer{
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+//********************* FIN RECIPE INDEX **********
+
+
+//*************** categories separating line ************
+h4.category-header  {
+  font-family: $font-headers;
+  position: relative;
+      overflow: hidden;
+      color: #444;
+      // color: #a1a1a1;
+      // color: #3b3b3b;
+      // color: $title-font-color;
+      span {
+          display: inline-block;
+          vertical-align: baseline;
+          zoom: 1;
+          *display: inline;
+          *vertical-align: auto;
+          position: relative;
+          padding-right: 40px;
+
+          &:after {
+              content: '';
+              display: block;
+              width: 1000px;
+              position: absolute;
+              top: 0.73em;
+              // border-top: 2px solid $primary-color;
+              border-top: 1px solid rgba(0, 0, 0, 0.15);
+              box-shadow: rgb(255, 255, 255) 0px 1px 0px 0px;
+              // border-top: 2px solid #a1a1a1;
+              // border-top: 2px solid #444;
+          }
+
+          &:before { right: 100%; }
+          &:after { left: 100%; }
+      }
+}
+//*************** FIN categories separating line ************
+
+
+
 .btn-primary {
     color: white !important;
 }
@@ -29,8 +148,8 @@ nav {
 
 
 small {
-    background: $background-nav;
-    color: $primary-color;
+    color: white;
+    background: $primary-color-lighter;
     display: block;
     margin: 10px 0;
     padding: 5px 10px;
@@ -54,42 +173,18 @@ small {
 .categories{
   .list-group-item {
     padding-left: 2em;
+    color: $categories-font-color;
+    font-weight: 600;
+    &.active {
+      color: white;
+    }
   }
 }
 
 
 
-h4.category-header  {
-  font-family: $font-headers;
-  position: relative;
-      overflow: hidden;
-      // color: #444;
-      // color: #a1a1a1;
-      color: #3b3b3b;
-      span {
-          display: inline-block;
-          vertical-align: baseline;
-          zoom: 1;
-          *display: inline;
-          *vertical-align: auto;
-          position: relative;
-          padding-right: 40px;
 
-          &:after {
-              content: '';
-              display: block;
-              width: 1000px;
-              position: absolute;
-              top: 0.73em;
-              border-top: 2px solid $primary-color;
-              // border-top: 2px solid #a1a1a1;
-              // border-top: 2px solid #444;
-          }
 
-          &:before { right: 100%; }
-          &:after { left: 100%; }
-      }
-}
 
 // ************************ ESTO ES SOLO DE LA RECETA *****************************
 
@@ -121,15 +216,7 @@ h1, h3 {
   @include bp-medium {
       columns: 1;
   }
-  // @media (min-width: 768px) {
-  //   columns: 1;
-  // }
-  // @media (min-width: 992px) {
-  //   columns: 2;
-  // }
-  // @include bp-medium {
-  //     columns: 2;
-  // }
+
 
   li {
        padding-bottom: 0.5em;
@@ -150,18 +237,11 @@ h1, h3 {
     i {
         margin-top: 0.2em;
     }
-}
+  }
 
 
-    // li {
-    //     margin-left: 1em;
-    //     text-indent: -1em;
-    // }
 }
-/*ul li {
-    margin-left: 1em;
-    text-indent: -1em;
-}*/
+
 .instrucciones::first-letter {
   font-family: $font-headers;
   font-size: 170%;
@@ -207,24 +287,7 @@ margin-top: -10px;
 -ms-transform: rotate(45deg);
 transform: rotate(45deg); }
 
-.recipe-card{
-  .card-footer{
-    padding: 0;
 
-
-  }
-}
-
-small.recipe-info {
-  margin: 0;
-  text-align: center;
-}
-
-span.span-footer{
-  text-align: center;
-  padding-left: 5px;
-  padding-right: 5px;
-}
 
 
 $grid-breakpoints-custom: (
