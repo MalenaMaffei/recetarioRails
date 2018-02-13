@@ -10,6 +10,7 @@ body {
 
 // *******************************   NAVBAR    *************************
 nav {
+    padding: 0 !important;
     background-color: $background-nav;
     .navbar-toggler {
         &:focus {
@@ -26,9 +27,23 @@ nav {
     padding-bottom: 0 !important;
     padding-right: 0 !important;
 
+    .square-links{
+      @include bp-small {
+          // display: inline-block;
+          display:table;
+    width:100%;
+      }
+    }
+
     .square-link {
+      @include bp-small {
+          // display: block;
+          // width: 33%;
+          display: table-cell;
+      }
       // background-color:black;
         a.nav-link{
+
           color:white !important;
           vertical-align: top;
           .caption {
@@ -52,7 +67,7 @@ nav {
           background-color: $primary-color-dark;
         }
         &#user {
-          // background-color: $primary-color-lighter;
+          background-color: $primary-color-lighter;
         }
         background-color: $primary-color;
 
