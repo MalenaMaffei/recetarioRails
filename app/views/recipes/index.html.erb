@@ -1,6 +1,5 @@
 <% @page_title = 'Recetas' %>
 
-<%= image_link_to 'body.jpg', '#', :width => '100%'%>
 <div class="row my-3">
     <div class="col-md-12 fixed d-md-none">
       <%= render(:partial => 'partials/select_category') %>
@@ -16,7 +15,7 @@
                         <div class="card my-2 recipe-card">
 
                             <!-- <img src="http://placehold.it/560x560" class="card-img-top"> -->
-                            <%= image_link_to 'cuchara.png', recipe_path(recipe), :width => '100%'%>
+                            <%= image_link_to 'default.jpg', recipe_path(recipe), :width => '100%'%>
                             <div class="card-body">
                               <%= link_to recipe_path(recipe), :style => "text-decoration: none;" do %>
                                 <h5 class="card-title"><%= recipe.name %></h5>
