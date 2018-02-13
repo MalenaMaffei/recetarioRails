@@ -77,7 +77,6 @@ class RecipesController < ApplicationController
 
 
     @user = helpers.current_user
-    byebug
     @recipe = @user.recipes.build(recipe_params.merge({ingredients:ingredients}))
     if params[:recipe][:image].blank?
            @recipe.image = nil
