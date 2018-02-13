@@ -36,7 +36,6 @@ gem 'font-awesome-rails'
 gem 'clipboard-rails'
 gem 'paperclip'
 gem 'devise'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -45,6 +44,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem "better_errors"
   gem "binding_of_caller"
+  gem 'dotenv-rails'
 end
 
 group :development do

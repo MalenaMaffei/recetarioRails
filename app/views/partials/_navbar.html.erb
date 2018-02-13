@@ -19,7 +19,9 @@
   </button>
 
 
+<div class="">
 
+</div>
 
 <ul class=" nav ml-auto">
   <li id="favs" class="nav-item icons">
@@ -33,18 +35,41 @@
       <span ><%= fa_icon "bell" %></span>
       <span class="badge badge-pill badge-light caption" data-behavior="unread-count"></span>
     </a>
-    <div id="notifications" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown02" data-behavior="notification-items">
+    <div id="notifications" class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdown02" data-behavior="notification-items">
         <% if current_user.notifications.active.empty? %>
           <p class="small text-muted mx-2">No hay notificaciones.</p>
         <% end %>
     </div>
   </li>
+</ul>
+
+<ul class=" nav ">
   <li id="new" class="nav-item square-link">
     <%= link_to new_recipe_path, :class => 'nav-link my-2' do  %>
       <%= image_tag "knives32x32.png" %>
       <span class="caption mt-2">Nueva</span>
       <span class="caption">Receta</span>
     <% end %>
+  </li>
+
+  <li id="group" class="nav-item dropdown square-link">
+    <a  class="nav-link my-2" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <%= image_tag "gloves32x32.png" %>
+      <span class="caption mt-2">grupo</span>
+      <span class="caption">nombre</span>
+    </a>
+
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">
+       <!-- <p class="dropdown-item">Hola <mark><strong><%= current_username %></strong></mark>!</p>        -->
+      <%= link_to 'Categorías', categories_path, :class => 'dropdown-item' %>
+      <% if current_user.admin? %>
+        <% link_to 'Usuarios', users_path, :class => 'dropdown-item' %>
+      <% end %>
+      <%= link_to 'Mis Recetas', recipes_path(:user => current_user.id), :class => 'dropdown-item' %>
+      <%= link_to 'Mi Perfil', user_path(current_user), :class => 'dropdown-item' %>
+      <%# link_to 'Salir', logout_path, :class => 'dropdown-item' %>
+      <%= link_to "Salir", destroy_user_session_path, :method => :delete, :class => 'dropdown-item'  %>
+    </div>
   </li>
 
   <li id="user" class="nav-item dropdown square-link" id="user">
