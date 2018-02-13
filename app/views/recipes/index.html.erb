@@ -16,7 +16,7 @@
                         <div class="card my-2 recipe-card">
 
                             <!-- <img src="http://placehold.it/560x560" class="card-img-top"> -->
-                            <%# image_link_to 'default.jpeg', recipe_path(recipe), :width => '100%'%>
+                            <%= image_link_to 'default.jpeg', recipe_path(recipe), :width => '100%'%>
                             <div class="card-body">
                               <%= link_to recipe_path(recipe), :style => "text-decoration: none;" do %>
                                 <h5 class="card-title"><%= recipe.name %></h5>

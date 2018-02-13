@@ -109,6 +109,10 @@ nav {
   .card-title {
     color: $title-font-color;
   }
+
+  .card-body{
+      padding: 0.75em;
+  }
 }
 
 .recipe-info {
