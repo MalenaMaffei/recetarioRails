@@ -18,7 +18,9 @@ nav {
           outline: none;
         }
     }
-
+    .dropdown-menu {
+        right: 0; left: auto;
+    }
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px 0px;
 
 
@@ -265,7 +267,7 @@ h1, h3 {
   margin-left: -1.5em;
   padding-left: 2em;
   padding-right: 1.2em;
-  color: #F86223;
+  color: $primary-color-dark;
 }
 
 
