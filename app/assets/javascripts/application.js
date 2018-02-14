@@ -31,10 +31,15 @@ $(document).on('turbolinks:load', function(){ // DOM ready
 
   // ::: TAGS BOX
   tags = $('#hiddenInput').val().split(',')
-  // console.log(tags);
-  tags.forEach(function (t) {
-      $("<span/>",{text:t.toLowerCase(), insertBefore:$("#tagInput"), class:'badge badge-primary badge-pill'});
-  });
+  console.log(tags);
+
+    tags.forEach(function (t) {
+      if(t.length > 0){
+        $("<span/>",{text:t.toLowerCase(), insertBefore:$("#tagInput"), class:'badge badge-primary badge-pill'});
+      }
+    });
+
+
 
   $("#tags input").on({
     focusout : function() {
