@@ -30,7 +30,14 @@
 $(document).on('turbolinks:load', function(){ // DOM ready
 
   // ::: TAGS BOX
-  tags = $('#hiddenInput').val().split(',')
+  console.log("valor con que viene el hidden");
+  console.log($('#hiddenInput').val());
+  if ($('#hiddenInput').val()){
+    tags = $('#hiddenInput').val().split(',');
+  } else {
+    tags = []
+  }
+
   console.log(tags);
 
     tags.forEach(function (t) {

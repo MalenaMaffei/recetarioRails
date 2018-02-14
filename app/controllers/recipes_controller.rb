@@ -67,8 +67,9 @@ class RecipesController < ApplicationController
   end
 
   def create
+    logger.debug("******** INGS AL CREAR ANTES SPLIT #{recipe_params[:ingredients]}***********")
     ingredients = recipe_params[:ingredients].split(',')
-
+    logger.debug("******** INGS AL CREAR DSP SPLIT #{ingredients}***********")
     # ingredients.map!(&:strip)
     # @recipe = Recipe.new(recipe_params.merge({ingredients:ingredients}))
     # @recipe.save
@@ -100,7 +101,9 @@ class RecipesController < ApplicationController
 
 
   def update
+    logger.debug("**************** INGS AL EDITAR ANTES SPLIT #{recipe_params[:ingredients]}***********")
     ingredients = recipe_params[:ingredients].split(',')
+    logger.debug("**************** INGS AL EDITAR DSP SPLIT #{ingredients}***********")
     @recipe = Recipe.find(params[:id])
     @recipe.update_attributes(recipe_params.merge({ingredients:ingredients}))
     # @recipe.instructions = simple_format(@recipe.instructions)
