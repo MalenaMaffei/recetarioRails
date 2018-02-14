@@ -62,13 +62,13 @@ $(document).on('turbolinks:load', function(){ // DOM ready
   });
 
   function refreshTags () {
-      let tagsList = [];
+      var tagslist = [];
       tags.forEach(function (t) {
-          tagsList.push(t);
+          tagslist.push(t);
       });
       // console.log("primero antes de refrescar");
       // console.log(tagsList);
-      $('#hiddenInput').attr('value', tagsList.join(','));
+      $('#hiddenInput').attr('value', tagslist.join(','));
       // console.log($('#hiddenInput').val());
     }
 
