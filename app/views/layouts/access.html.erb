@@ -11,23 +11,78 @@
     <%= stylesheet_link_tag    'login', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render :partial => 'partials/favicons' %>
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   </head>
 
 
   <body>
     <header id="showcase">
-            <div class="dark-overlay">
-              <h1>Welcome to the Beach</h1>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum veniam est temporibus sed, repudiandae earum.</p>
-              <%= render(:partial => 'partials/flash') %>
-
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-7">
+            <h1>Compartí tus recetas!</h1>
+            <p>Estás cansado de andar pidiendo las recetas familiares cada dos por tres? Crea un grupo para tu familia o amigos! Tendrán todas sus recetas en un mismo lugar y solo los miembros del grupo tendrán acceso a ellas.</p>
+            <%= render(:partial => 'partials/flash') %>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="forms">
               <%= yield %>
-              <a href="#content" class="button">Read More</a>
             </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+          <a href="#content" id="leer">
+            <span><h3>Leer Más</h3></span>
+            <i class="fa fa-angle-double-down fa-3x animated  bounce"></i>
+          </a>
 
-        </header>
+          <!-- <section id="section05" class="demo">
+            <a href="#content"><h1>Leer Más</h1></a>
+            <a href="#content"><span></span></a>
+          </section> -->
+        </div>
+      </div>
+
+    </header>
+
+    <div class="container" id="content">
+        <div class="row">
+          <h2>Recetario Familiar</h2>
+          <section id="section-a">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis sit labore illo voluptates vero, repellat quibusdam eius ut, quos possimus perspiciatis facilis nisi ipsam maxime magni atque autem, culpa magnam aperiam in iusto eum facere alias?
+                Eius laborum eum nisi quasi deserunt aliquid error, quos corporis odit eaque ex, accusantium harum quaerat magnam esse repellat, quae maxime iure rem. Numquam delectus vero illo vitae quam, eos asperiores laudantium quidem ullam exercitationem
+                quo enim tempore sit quaerat dicta fugiat odio aspernatur excepturi. Saepe, quas earum. Mollitia unde sed impedit voluptatibus? Dolor illum, explicabo reiciendis fuga reprehenderit hic doloribus delectus sunt dicta.</p>
+        </section>
+        </div>
+        <div class="row">
+          <h2>Recetario Familiar</h2>
+          <section id="section-a">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis sit labore illo voluptates vero, repellat quibusdam eius ut, quos possimus perspiciatis facilis nisi ipsam maxime magni atque autem, culpa magnam aperiam in iusto eum facere alias?
+                Eius laborum eum nisi quasi deserunt aliquid error, quos corporis odit eaque ex, accusantium harum quaerat magnam esse repellat, quae maxime iure rem. Numquam delectus vero illo vitae quam, eos asperiores laudantium quidem ullam exercitationem
+                quo enim tempore sit quaerat dicta fugiat odio aspernatur excepturi. Saepe, quas earum. Mollitia unde sed impedit voluptatibus? Dolor illum, explicabo reiciendis fuga reprehenderit hic doloribus delectus sunt dicta.</p>
+        </section>
+        </div>
+
+    </div>
 
 
 
+    <script>
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
   </body>
 </html>
