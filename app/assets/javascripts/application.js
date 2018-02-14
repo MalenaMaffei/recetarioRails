@@ -22,8 +22,54 @@
 
 
 
-$(document).ready(function(){
+// $(document).ready(function(){
+//
+//   var clipboard = new Clipboard('.clipboard-btn');
+//   console.log(clipboard);
+// });
+$(document).on('turbolinks:load', function(){ // DOM ready
 
-  var clipboard = new Clipboard('.clipboard-btn');
-  console.log(clipboard);
+  // ::: TAGS BOX
+  tags = $('#hiddenInput').val().split(',')
+  // console.log(tags);
+  tags.forEach(function (t) {
+      $("<span/>",{text:t.toLowerCase(), insertBefore:$("#tagInput"), class:'badge badge-primary badge-pill'});
+  });
+
+  $("#tags input").on({
+    focusout : function() {
+
+      var txt= this.value.replace(/[^a-z0-9\+\-\.\#\s]/ig,''); // allowed characters
+      if(txt){
+        $("<span/>",{text:txt.toLowerCase(), insertBefore:this, class:'badge badge-primary badge-pill'});
+        tags.push(txt)
+        refreshTags();
+      }
+      this.value="";
+    },
+    keyup : function(ev) {
+      // if: comma|enter (delimit more keyCodes with | pipe)
+      if(/(188|13)/.test(ev.which)) $(this).focusout();
+    }
+  });
+
+  $('#tags').on('click', 'span', function() {
+    var txt = $(this).text();
+    $(this).remove();
+    var i = tags.indexOf(txt);
+    tags.splice(i, 1);
+    refreshTags();
+  });
+
+  function refreshTags () {
+      let tagsList = [];
+      tags.forEach(function (t) {
+          tagsList.push(t);
+      });
+      // console.log("primero antes de refrescar");
+      // console.log(tagsList);
+      $('#hiddenInput').attr('value', tagsList.join(','));
+      // console.log($('#hiddenInput').val());
+    }
+
 });

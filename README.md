@@ -4,7 +4,7 @@
 * volver atras link que te lleve atras si estabas en el dominio de las recetas, sino que te lleve a recipes_path
 * muy villa el select de las categorias, ver si se puede hacer mas elegante
 * ver que onda de ir borrando las  notificaciones de la db
-
+* fotos no funcionan bien, ver de subir a AWS
 
 
 
@@ -67,7 +67,8 @@
 
     * https://thinkflipp.com/work/
 
-
+* login
+* cambiar la foto default
 
 # usabilidad
 Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
@@ -81,6 +82,8 @@ Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
 * que cuando te muestre todas las recetas de las divida por cats
 
 * dividir los enters en pasos numerados
+
+* sacar solo espacios del tag
 
 # Pruebas
 

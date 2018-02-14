@@ -21,7 +21,10 @@
     <div class="col-md-6">
       <div class="form-group">
         <%= f.label "Ingredientes y Cantidades", :class => "font-weight-bold" %>
-        <%= f.text_area :ingredients, :value => get_ingredients(recipe), :class => 'form-control', :placeholder => "1 huevo, 100gr de pan rallado", :size => '10x6' %>
+        <div id="tags">
+          <%= f.hidden_field :ingredients, :value => get_ingredients(recipe), :id => 'hiddenInput' %>
+          <%= text_field_tag 'tagInput', nil, class: 'form-control', :placeholder => "Separa los ingredientes por coma" %>
+        </div>
       </div>
     </div>
     <div class="col-md-6">
@@ -36,6 +39,8 @@
     <%= f.label "Instrucciones", :class => "font-weight-bold" %>
     <%= f.text_area :instructions, :class => 'form-control', :size => '10x8'%>
   </div>
+
+
 
   <div class="form-group">
     <%= f.label "Foto" %>
