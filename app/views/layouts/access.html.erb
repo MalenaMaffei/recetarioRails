@@ -2,7 +2,8 @@
 <html>
   <head>
       <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login | r Blog</title>
 
     <%= csrf_meta_tags %>
@@ -14,13 +15,18 @@
 
 
   <body>
+    <header id="showcase">
+            <div class="dark-overlay">
+              <h1>Welcome to the Beach</h1>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum veniam est temporibus sed, repudiandae earum.</p>
+              <%= render(:partial => 'partials/flash') %>
 
-        <div class="container">
+              <%= yield %>
+              <a href="#content" class="button">Read More</a>
+            </div>
 
-            <%= render(:partial => 'partials/flash') %>
+        </header>
 
-            <%= yield %>
-        </div>
 
 
   </body>

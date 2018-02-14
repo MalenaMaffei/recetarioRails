@@ -68,7 +68,6 @@
     * https://thinkflipp.com/work/
 
 * login
-* cambiar la foto default
 
 # usabilidad
 Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
@@ -84,6 +83,8 @@ Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
 * dividir los enters en pasos numerados
 
 * sacar solo espacios del tag
+
+* si es xs saco las fotos de recipes index?
 
 # Pruebas
 

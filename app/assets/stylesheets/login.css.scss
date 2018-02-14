@@ -1,48 +1,88 @@
 @import 'variables';
 @import 'bootstrap';
 
+// body {
+//     padding-top: 40px;
+//     padding-bottom: 40px;
+//     background-color: $background-dark;
+//     color: #fff;
+// }
+//
+// input {
+//     margin-bottom: 10px;
+// }
+//
+// .btn, input {
+//     border: none;
+//     border-radius: 0;
+//     &:hover {
+//         background: #ccc;
+//         color: #666;
+//     }
+// }
+//
+// .form-signin {
+//     max-width: 330px;
+//     padding: 15px;
+//     margin: 0 auto;
+//     .form-signing-heading, .checkbox{
+//         margin-bottom: 10px;
+//         text-align: center;
+//     }
+//
+//     .checkbox {
+//         font-weight: normal;
+//     }
+//
+//     .form-control {
+//         position: relative;
+//         height: auto;
+//         box-sizing: border-box;
+//         padding: 10px;
+//         font-size: 16px;
+//
+//         &:focus {
+//             z-index: 2;
+//         }
+//     }
+// }
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
+
 body {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: $background-dark;
-    color: #fff;
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    font-size: 17px;
+    color: white;
+    line-height: 1.6;
 }
 
-input {
-    margin-bottom: 10px;
+
+
+
+#showcase {
+    background-image: image-url('landing-ing-3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
 }
-
-.btn, input {
-    border: none;
-    border-radius: 0;
-    &:hover {
-        background: #ccc;
-        color: #666;
-    }
-}
-
-.form-signin {
-    max-width: 330px;
-    padding: 15px;
-    margin: 0 auto;
-    .form-signing-heading, .checkbox{
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
-    .checkbox {
-        font-weight: normal;
-    }
-
-    .form-control {
-        position: relative;
-        height: auto;
-        box-sizing: border-box;
-        padding: 10px;
-        font-size: 16px;
-
-        &:focus {
-            z-index: 2;
-        }
-    }
-}
+//
+//
+// .dark-overlay {
+//     // background-color: rgba(219, 188, 148, 0.2);
+//     background-color: rgba(255, 142, 136, 0.2);
+//
+//     // position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//
+// }
