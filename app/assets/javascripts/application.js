@@ -44,7 +44,10 @@ $(document).on('turbolinks:load', function(){ // DOM ready
   $("#tags input").on({
     focusout : function() {
 
-      var txt= this.value.replace(/[^a-z0-9\+\-\.\#\s]/ig,''); // allowed characters
+      // var txt= this.value.replace(/[^a-z0-9\+\-\.\#\s]/ig,''); // allowed characters
+      var txt= this.value.replace(/[,;]/ig,''); // allowed characters
+      txt = txt.replace(/^\s+$/ig,''); // allowed characters
+      // var txt= this.value
       if(txt){
         $("<span/>",{text:txt.toLowerCase(), insertBefore:this, class:'badge badge-primary badge-pill'});
         tags.push(txt)
@@ -71,10 +74,10 @@ $(document).on('turbolinks:load', function(){ // DOM ready
       tags.forEach(function (t) {
           tagslist.push(t);
       });
-      // console.log("primero antes de refrescar");
-      // console.log(tagsList);
+      console.log("primero antes de refrescar");
+      console.log(tagslist);
       $('#hiddenInput').attr('value', tagslist.join(','));
-      // console.log($('#hiddenInput').val());
+      console.log($('#hiddenInput').val());
     }
 
 });

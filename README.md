@@ -7,7 +7,7 @@
 * fotos no funcionan bien, ver de subir a AWS
 
 
-
+* BUG editando recetas, borras el ing pero no se borra realmente
 # Features
 
 * https://coderwall.com/p/rqjjca/creating-a-scoped-invitation-system-for-rails
@@ -20,7 +20,7 @@
 
 
 
-* crear pdf con recetas
+* crear pdf con recetas: https://github.com/mileszs/wicked_pdf
 
 
 * poner todas las relaciones en los modelos cuando este todo listo
@@ -78,13 +78,11 @@ Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
 
 * Hacer que el admin pueda ver las recetas de cada user.
 
-* que cuando te muestre todas las recetas de las divida por cats
 
 * dividir los enters en pasos numerados
 
-* sacar solo espacios del tag
 
-* si es xs saco las fotos de recipes index?
+
 
 # Pruebas
 
