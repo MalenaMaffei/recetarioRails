@@ -7,7 +7,7 @@
 * fotos no funcionan bien, ver de subir a AWS
 
 
-* BUG editando recetas, borras el ing pero no se borra realmente
+* BUG con ingredientes con enter! reemplazar los enters por espacios.
 # Features
 
 * https://coderwall.com/p/rqjjca/creating-a-scoped-invitation-system-for-rails
@@ -67,7 +67,8 @@
 
     * https://thinkflipp.com/work/
 
-* login
+* login:
+    * en vez de usar animated, usar lo que use para ese coso de google
 
 # usabilidad
 Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...

@@ -11,8 +11,7 @@
     <%= stylesheet_link_tag    'login', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render :partial => 'partials/favicons' %>
-    <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   </head>
 
 
@@ -33,14 +32,10 @@
         </div>
         <div class="row justify-content-center mt-3">
           <a href="#content" id="leer">
-            <span><h3>Leer Más</h3></span>
-            <i class="fa fa-angle-double-down fa-3x animated  bounce"></i>
+            <span><h3 id="boton">Leer Más</h3></span>
+            <i id="flecha" class="fa fa-angle-double-down fa-3x"></i>
           </a>
 
-          <!-- <section id="section05" class="demo">
-            <a href="#content"><h1>Leer Más</h1></a>
-            <a href="#content"><span></span></a>
-          </section> -->
         </div>
       </div>
 
@@ -67,7 +62,19 @@
     </div>
 
 
-
+    <script>
+        window.sr = ScrollReveal();
+       sr.reveal('#boton', {
+         duration: 1500,
+         delay: 800,
+         origin: 'bottom'
+       });
+       sr.reveal('#flecha', {
+         duration: 800,
+         delay: 500,
+         origin: 'top'
+       });
+    </script>
     <script>
         $(function() {
             $('a[href*="#"]:not([href="#"])').click(function() {
