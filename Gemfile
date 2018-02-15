@@ -36,6 +36,11 @@ gem 'font-awesome-rails'
 gem 'clipboard-rails'
 gem 'paperclip'
 gem 'devise'
+gem 'omniauth-facebook'
+
+
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

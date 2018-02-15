@@ -7,6 +7,11 @@
 * fotos no funcionan bien, ver de subir a AWS
 
 
+* verificar que este andando bien omniauth: https://github.com/plataformatec/devise/wiki/omniauth:-overview
+    * creao que funca!
+    * crear seccion de perfil para que la gente pueda ponerse una pass
+
+
 * BUG con ingredientes con enter! reemplazar los enters por espacios.
 # Features
 
