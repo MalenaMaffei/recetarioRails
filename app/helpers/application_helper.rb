@@ -1,7 +1,7 @@
 module ApplicationHelper
 
 
-    
+
     def user_signed_in?
       !!current_user
     end
@@ -31,6 +31,10 @@ module ApplicationHelper
         else
             ''
         end
+    end
+
+    def get_default_img
+      "defaults/#{rand(14)}.png"
     end
 
     def allowed?(owner)

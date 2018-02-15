@@ -19,7 +19,9 @@
                                 <% if recipe.image? %>
                                 <%= image_link_to recipe.image.url, recipe_path(recipe), :width => '100%' %>
                                 <% else %>
-                                    <%= image_link_to 'cutlery256x256-borde.png', recipe_path(recipe), :width => '100%'%>
+                                    <%# image_link_to 'cutlery256x256-borde.png', recipe_path(recipe), :width => '100%'%>
+                                    <%= image_link_to get_default_img, recipe_path(recipe), :width => '100%'%>
+
                                 <% end %>
                             </div>
 
