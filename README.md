@@ -82,7 +82,7 @@ Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
 
 * dividir los enters en pasos numerados
 
-
+* que devise no muestre tantos errores
 
 
 # Pruebas
