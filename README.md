@@ -8,11 +8,11 @@
 
 
 * verificar que este andando bien omniauth: https://github.com/plataformatec/devise/wiki/omniauth:-overview
-    * creao que funca!
+    * creao que funca!, a veces no :(
     * crear seccion de perfil para que la gente pueda ponerse una pass
 
 
-* BUG con ingredientes con enter! reemplazar los enters por espacios.
+
 # Features
 
 * https://coderwall.com/p/rqjjca/creating-a-scoped-invitation-system-for-rails
@@ -83,7 +83,7 @@ Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
 
 * Hacer que el admin pueda ver las recetas de cada user.
 
-* dividir los enters en pasos numerados
+* sacar textarea de recipe form y dejar todo con divs, cuando hago enter se crea uno nuevo y chau, y se pueden crear en el medio
 
 
 # Pruebas
