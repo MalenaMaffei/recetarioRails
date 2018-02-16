@@ -86,21 +86,21 @@ $(document).on('turbolinks:load', function(){ // DOM ready
   console.log("valor con que viene el hidden");
   console.log($('#instrHidden').val());
   if ($('#instrHidden').val()){
-    instrs = $('#instrHidden').val().split('</p><p>');
+    instrs = $('#instrHidden').val().split('</li><li>');
   } else {
     instrs = []
   }
 
 
   for (var i=0; i < instrs.length; i++) {
-    instrs[i] = instrs[i].replace(/<p>|<\/p>/ig,'');
+    instrs[i] = instrs[i].replace(/<li>|<\/li>/ig,'');
   }
   console.log(instrs);
 
   for (var i=0; i < instrs.length; i++) {
     t = instrs[i];
     if(t.length > 0){
-      $("<div/>",{text:t, insertBefore:$("#instrInput"), class:'card bg-light card-body my-2', id: i}).attr("contentEditable", true);
+      $("<div/>",{text:t, insertBefore:$("#instrInput"), class:'card border-primary card-body my-2', id: i}).attr("contentEditable", true);
     }
   }
 
@@ -116,7 +116,7 @@ $("#instr textarea").on({
     // var txt= this.value
     if(txt){
       let id = instrs.length
-      $("<div/>",{text:txt, insertBefore:this, class:'card bg-light card-body my-2', id: id}).attr("contentEditable", true);
+      $("<div/>",{text:txt, insertBefore:this, class:'card border-primary card-body my-2', id: id}).attr("contentEditable", true);
       instrs.push(txt)
       refreshInstr();
     }
@@ -127,33 +127,143 @@ $("#instr textarea").on({
     // if: comma|enter (delimit more keyCodes with | pipe)
     console.log(ev.which);
     if(/(13)/.test(ev.which)) $(this).focusout();
-  }
+  },
 });
+
+
+
+
+$('#instr').on('focusout','div', function() {
+        console.log("entra focusout");
+        console.log(this.textContent);
+        let id = $(this).attr('id')
+        console.log(id);
+        let str = this.textContent
+        str = str.replace(/^\s+|\s+$/g,''); // allowed characters
+        if (str == instrs[id]){
+          return;
+        }
+        if(str){
+          instrs[id] = str
+        } else {
+            instrs[id] = ''
+        }
+        refreshInstr();
+      }
+);
+
+
+$('#instr').on('keydown','div', function(ev) {
+  // if: comma|enter (delimit more keyCodes with | pipe)
+  console.log(ev.which);
+
+  if(/(8)/.test(ev.which)){
+      let txt = $(this).text();
+      let id = $(this).attr('id')
+      if(!txt){
+        instrs[id] = ''
+        $(this).remove();
+        // var i = instrs.indexOf(txt);
+        // instrs.splice(i, 1);
+        refreshInstr();
+      }
+
+  }
+}
+
+);
+
+
+
+function refreshInstr () {
+    var tagslist = [];
+    instrs.forEach(function (t) {
+        tagslist.push(t);
+    });
+    console.log("primero antes de refrescar");
+    console.log(tagslist);
+    $('#instrHidden').attr('value', '<li>' + tagslist.filter(Boolean).join('</li><li>') + '</li>');
+    console.log($('#instrHidden').val());
+}
+
+
+
+
+
+
+
+
+
 
 
 
 // todo esto no sirve, necesito orden
-$('#instr div').on('focusout', function() {
-  // console.log(this.textContent);
-  let id = $(this).attr('id')
-  console.log(id);
-  let str = this.textContent
-  str = str.replace(/^\s+|\s+$/g,''); // allowed characters
-  if (str == instrs[id]){
-    return;
-  }
-  if(str){
-    instrs[id] = str
-    // refreshInstr();
-  } else {
-      // $(this).remove();
-      instrs[id] = ''
-      // var i = instrs.indexOf(txt);
-      // instrs.splice(i, 1);
-      // refreshInstr();
-  }
-  refreshInstr();
-});
+// $('#instr div').on({
+//   focusout: function() {
+//       console.log("entra focusout");
+//       console.log(this.textContent);
+//       let id = $(this).attr('id')
+//       console.log(id);
+//       let str = this.textContent
+//       str = str.replace(/^\s+|\s+$/g,''); // allowed characters
+//       if (str == instrs[id]){
+//         return;
+//       }
+//       if(str){
+//         instrs[id] = str
+//       } else {
+//           instrs[id] = ''
+//       }
+//       refreshInstr();
+//     }
+// });
+  // keyup : function(ev) {
+  //   // if: comma|enter (delimit more keyCodes with | pipe)
+  //   console.log(ev.which);
+  //
+  //   if(/(8)/.test(ev.which)){
+  //       let txt = $(this).text();
+  //       let id = $(this).attr('id')
+  //       if(!txt){
+  //         instrs[id] = ''
+  //         $(this).remove();
+  //         // var i = instrs.indexOf(txt);
+  //         // instrs.splice(i, 1);
+  //         refreshInstr();
+  //       }
+  //
+  //   }
+  // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ('focusout', function() {
+//   // console.log(this.textContent);
+//   let id = $(this).attr('id')
+//   console.log(id);
+//   let str = this.textContent
+//   str = str.replace(/^\s+|\s+$/g,''); // allowed characters
+//   if (str == instrs[id]){
+//     return;
+//   }
+//   if(str){
+//     instrs[id] = str
+//   } else {
+//       instrs[id] = ''
+//   }
+//   refreshInstr();
+// });
 
 
 
@@ -184,16 +294,7 @@ $('#instr div').on('focusout', function() {
 //   refreshInstr();
 // });
 
-function refreshInstr () {
-    var tagslist = [];
-    instrs.forEach(function (t) {
-        tagslist.push(t);
-    });
-    console.log("primero antes de refrescar");
-    console.log(tagslist);
-    $('#instrHidden').attr('value', '<p>' + tagslist.filter(Boolean).join('</p><p>') + '</p>');
-    console.log($('#instrHidden').val());
-  }
+
 
 
 });

@@ -256,8 +256,60 @@ small {
 
 //********** fin comments
 
+// RECIPE FORM
 
+
+.numbered-instrs {
+    margin-left: 0;
+    padding-right: 0;
+    list-style-type: none;
+    li {
+      counter-increment: step-counter;
+      // border-top: 3px solid $primary-color-dark;
+      margin-top: 10px;
+      background:$secondary-color-light;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      &:before {
+        content: counter(step-counter);
+        font-family: 'Roboto', monospace;
+        margin-right: 10px;
+        font-size: 130%;
+        background-color: $primary-color-dark;
+        color: white;
+        font-weight: bold;
+        padding: 3px 8px;
+        -moz-box-sizing:border-box;
+      	-webkit-box-sizing:border-box;
+      	box-sizing:border-box;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+      &:last-child {margin-bottom: 0;}
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// END RECIPE FORM
 // ************************ ESTO ES SOLO DE LA RECETA *****************************
+
+.numbered-instrs{
+
+}
+
+
+
 
 p, li {
     // font-size: 150%;

@@ -8,13 +8,15 @@
         </div>
     <ul class="ingredient">
         <% @recipe.ingredients.each do |ingredient| %>
-        <li><%= fa_icon "cutlery" %> <%= ingredient %></li>
+        <li><%= fa_icon "cutlery " %> <%= ingredient %></li>
         <% end %>
     </ul>
     <div class="divider"></div>
     <div class="instrucciones">
         <%# simple_format(@recipe.instructions) %>
-        <%= sanitize(@recipe.instructions, :tags => ['p', 'br', 'strong', 'em']) %>
+        <ol class="numbered-instrs">
+        <%= sanitize(@recipe.instructions, :tags => ['li', 'strong', 'em']) %>
+        </ol>
     </div>
 
 <!-- </div> -->
