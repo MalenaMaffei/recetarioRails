@@ -96,7 +96,7 @@ if ($('#instrHidden').val()){
         handle: 'i',
         cancel: '',
         update: function( event, ui) {
-          let newinstr = [];
+          var newinstr = [];
           $('.instruction').each(function(index ) {
               console.log('index: ' + index);
               console.log('div-index: ' + $(this).attr('id'));
@@ -142,7 +142,7 @@ $("#instr textarea").on({
     var txt = this.value.replace(/^\s+|\s+$/g,''); // allowed characters
     // var txt= this.value
     if(txt){
-      let id = instrs.length
+      var id = instrs.length
       $("<div/>",{text:txt, insertBefore:this, class:'card border-secondary card-body my-2 instruction', id: id, html: "<i class='fa fa-bars text-primary  ml-auto'></i>"+txt}).attr("contentEditable", true);
       instrs.push(txt)
       refreshInstr();
@@ -163,9 +163,9 @@ $("#instr textarea").on({
 $('#instr').on('focusout','div', function() {
           console.log("entra focusout");
           console.log(this.textContent);
-          let id = $(this).attr('id')
+          var id = $(this).attr('id')
           console.log(id);
-          let str = this.textContent
+          var str = this.textContent
           str = str.replace(/^\s+|\s+$/g,''); // allowed characters
           if (str == instrs[id]){
             $('#instr textarea').focus();
@@ -188,8 +188,8 @@ $('#instr').on('keydown','div', function(ev) {
   console.log(ev.which);
 
   if(/(8)/.test(ev.which)){
-      let txt = $(this).text();
-      let id = $(this).attr('id')
+      var txt = $(this).text();
+      var id = $(this).attr('id')
       if(!txt){
         instrs[id] = ''
         $(this).remove();
