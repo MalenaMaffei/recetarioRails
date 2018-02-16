@@ -259,21 +259,51 @@ small {
 // RECIPE FORM
 
 
+
+.card {
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px 0px;
+}
+
+
+
+.placeholder {
+    border: 2px solid $blue-accent;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 10px #888;
+    -moz-box-shadow: 0px 0px 10px #888;
+    box-shadow: 0px 0px 10px #888;
+}
+
+
+
+
+
+
+
+// END RECIPE FORM
+// ************************ ESTO ES SOLO DE LA RECETA *****************************
+
 .numbered-instrs {
     margin-left: 0;
     padding-right: 0;
     list-style-type: none;
     li {
       counter-increment: step-counter;
-      // border-top: 3px solid $primary-color-dark;
-      margin-top: 10px;
+      // border-top: 2px solid $primary-color-dark;
+      margin-bottom: 18px;
       background:$secondary-color-light;
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px;
+      position:relative;
       &:before {
         content: counter(step-counter);
+        position:absolute;
+        top:-2px;
+        left:-2em;
         font-family: 'Roboto', monospace;
         margin-right: 10px;
+        // margin-bottom: 10px;
         font-size: 130%;
         background-color: $primary-color-dark;
         color: white;
@@ -288,26 +318,6 @@ small {
       &:last-child {margin-bottom: 0;}
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// END RECIPE FORM
-// ************************ ESTO ES SOLO DE LA RECETA *****************************
-
-.numbered-instrs{
-
-}
-
 
 
 
