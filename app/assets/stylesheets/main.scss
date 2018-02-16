@@ -7,7 +7,9 @@ body {
 //     background: white;
 // }
 
-
+.flash.alert:empty {
+  display: none;
+}
 // *******************************   NAVBAR    *************************
 nav {
     padding: 0 !important;
@@ -311,10 +313,12 @@ h1, h3 {
 
 }
 
-.instrucciones::first-letter {
-  font-family: $font-headers;
-  font-size: 170%;
-  color: #F86223;
+.instrucciones{
+  p::first-letter {
+    font-family: $font-headers;
+    font-size: 170%;
+    color: $primary-color-dark;
+  }
 }
 
 

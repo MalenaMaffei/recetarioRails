@@ -72,8 +72,7 @@
 
     * https://thinkflipp.com/work/
 
-* login:
-    * en vez de usar animated, usar lo que use para ese coso de google
+
 
 # usabilidad
 Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
@@ -84,10 +83,7 @@ Poder darle titulos a los ingredientes, tipo: Masa: .... Relleno: ...
 
 * Hacer que el admin pueda ver las recetas de cada user.
 
-
 * dividir los enters en pasos numerados
-
-* que devise no muestre tantos errores
 
 
 # Pruebas
