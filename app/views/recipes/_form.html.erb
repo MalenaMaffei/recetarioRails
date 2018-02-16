@@ -37,7 +37,10 @@
 
   <div class="form-group">
     <%= f.label "Instrucciones", :class => "font-weight-bold" %>
-    <%= f.text_area :instructions, :class => 'form-control', :size => '10x8'%>
+    <div id="instr">
+      <%= f.hidden_field :instructions, :value => recipe.instructions, :id => 'instrHidden' %>
+      <%= text_area_tag 'instrInput', nil, :class => 'form-control', :size => '10x8'%>
+    </div>
   </div>
 
 

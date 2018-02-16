@@ -12,6 +12,9 @@
         <% end %>
     </ul>
     <div class="divider"></div>
-    <div class="instrucciones"><%= simple_format(@recipe.instructions) %></div>
-    
+    <div class="instrucciones">
+        <%# simple_format(@recipe.instructions) %>
+        <%= sanitize(@recipe.instructions, :tags => ['p', 'br', 'strong', 'em']) %>
+    </div>
+
 <!-- </div> -->
