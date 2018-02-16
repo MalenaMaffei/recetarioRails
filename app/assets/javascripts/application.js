@@ -96,19 +96,19 @@ if ($('#instrHidden').val()){
         handle: 'i',
         cancel: '',
         update: function( event, ui) {
-          let newInstr = [];
+          let newinstr = [];
           $('.instruction').each(function(index ) {
               console.log('index: ' + index);
               console.log('div-index: ' + $(this).attr('id'));
               $(this).attr('id', index);
-              newInstr.push($(this).text());
+              newinstr.push($(this).text());
               // index++;
               // $(this).text(index );
           })
           // console.log('new array: ');
-          // console.log(newInstr);
-          console.log(newInstr);
-          instrs = newInstr;
+          // console.log(newinstr);
+          console.log(newinstr);
+          instrs = newinstr;
           refreshInstr();
         }
         // forceHelperSize: true
