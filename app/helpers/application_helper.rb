@@ -25,6 +25,30 @@ module ApplicationHelper
         User.find(session[:user_id]).username if session[:user_id]
     end
 
+    def resource_name
+        :user
+    end
+
+    def resource
+        @resource ||= User.new
+    end
+
+    def devise_mapping
+        @devise_mapping ||= Devise.mappings[:user]
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+
     def get_ingredients(recipe)
         if recipe.ingredients
             recipe.ingredients.join(', ')

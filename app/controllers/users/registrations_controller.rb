@@ -2,6 +2,8 @@
 
 class Users::RegistrationsController < Devise::RegistrationsController
     layout 'access'
+    layout "application", only: [:edit]
+    include ApplicationHelper
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
@@ -16,9 +18,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # GET /resource/edit
-  # def edit
-  #   super
-  # end
+  def edit
+    # @resource = helpers.resource
+    super
+  end
 
   # PUT /resource
   # def update
