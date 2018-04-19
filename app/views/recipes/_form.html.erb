@@ -22,9 +22,8 @@
       <div class="form-group">
         <%= f.label "Ingredientes y Cantidades", :class => "font-weight-bold" %>
         <div id="tags">
-            <div data-behavior='ingredients_area'></div>
           <%= f.hidden_field :ingredients, :value => get_ingredients(recipe), :id => 'hiddenInput' %>
-          <%= text_field_tag 'tagInput', nil, class: 'form-control', :placeholder => "Separa los ingredientes por coma", data: { behavior: "ingredient_input" } %>
+          <%= text_field_tag 'tagInput', nil, class: 'form-control', :placeholder => "Separa los ingredientes por coma" %>
         </div>
       </div>
     </div>
@@ -38,7 +37,7 @@
 
   <div class="form-group">
     <%= f.label "Instrucciones", :class => "font-weight-bold" %>
-    <div id="instr" data-behavior='instr_area'>
+    <div id="instr">
       <%= f.hidden_field :instructions, :value => recipe.instructions, :id => 'instrHidden' %>
       <%= text_area_tag 'instrInput', nil, :class => 'form-control', :size => '10x8'%>
     </div>

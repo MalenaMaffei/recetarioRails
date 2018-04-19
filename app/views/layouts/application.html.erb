@@ -29,22 +29,6 @@
   window.location = $(this).find("option:selected").val();
 });
 
-
-// Clipboard
-
-var clipboard = new Clipboard('.clipboard-btn');
-
-clipboard.on('success', function(e) {
-    console.log('se copio');
-  setTooltip(e.trigger, 'Link copiado!');
-  hideTooltip(e.trigger);
-});
-
-clipboard.on('error', function(e) {
-  setTooltip(e.trigger, 'No Funciono! :()');
-  hideTooltip(e.trigger);
-});
-
 $('.clipboard-btn').tooltip({
   trigger: 'click',
   placement: 'right'
@@ -61,6 +45,21 @@ function hideTooltip(btn) {
     $(btn).tooltip('hide');
   }, 1000);
 }
+
+// Clipboard
+
+var clipboard = new Clipboard('.clipboard-btn');
+
+clipboard.on('success', function(e) {
+  setTooltip(e.trigger, 'Link copiado!');
+  hideTooltip(e.trigger);
+});
+
+clipboard.on('error', function(e) {
+  setTooltip(e.trigger, 'No Funciono! :()');
+  hideTooltip(e.trigger);
+});
+
 
 
   </script>
