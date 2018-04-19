@@ -2,6 +2,7 @@
 class RecipesController < ApplicationController
   layout "shared", only: [:show_shareable]
   # before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: [:show_shareable]
   before_action :confirm_permissions, :only => [:edit, :update, :destroy]
 
   # def user_signed_in?
